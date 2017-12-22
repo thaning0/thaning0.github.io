@@ -1,0 +1,1438 @@
+<!DOCTYPE html>
+
+
+
+  
+
+
+<html class="theme-next gemini use-motion" lang="zh-Hans">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+<meta name="theme-color" content="#222">
+
+
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.1.3" rel="stylesheet" type="text/css" />
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=5.1.3">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=5.1.3">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=5.1.3">
+
+
+  <link rel="mask-icon" href="/images/logo.svg?v=5.1.3" color="#222">
+
+
+
+
+
+  <meta name="keywords" content="battle,life" />
+
+
+
+
+
+
+
+
+
+
+<meta name="description" content="Mathjax基本用法[toc] 1.输入1.1输入公式 行中式：$...$ 单独行：$$...$$  1.2输入数字与英文字母   字体 代码 效果     空心字体 \mathbb{ABC123} $ \mathbb{ABC123} $   boldface字体 \mathbf{ABC123} $ \mathbf{ABC123} $   calligraphic字体 \mathcal{ABC1">
+<meta property="og:type" content="article">
+<meta property="og:title" content="test">
+<meta property="og:url" content="http://thaning0.github.io.git/2017/12/22/a/index.html">
+<meta property="og:site_name" content="Than0&#39;s BLOG">
+<meta property="og:description" content="Mathjax基本用法[toc] 1.输入1.1输入公式 行中式：$...$ 单独行：$$...$$  1.2输入数字与英文字母   字体 代码 效果     空心字体 \mathbb{ABC123} $ \mathbb{ABC123} $   boldface字体 \mathbf{ABC123} $ \mathbf{ABC123} $   calligraphic字体 \mathcal{ABC1">
+<meta property="og:locale" content="zh-Hans">
+<meta property="og:updated_time" content="2017-12-22T10:27:50.473Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="test">
+<meta name="twitter:description" content="Mathjax基本用法[toc] 1.输入1.1输入公式 行中式：$...$ 单独行：$$...$$  1.2输入数字与英文字母   字体 代码 效果     空心字体 \mathbb{ABC123} $ \mathbb{ABC123} $   boldface字体 \mathbf{ABC123} $ \mathbf{ABC123} $   calligraphic字体 \mathcal{ABC1">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Gemini',
+    version: '5.1.3',
+    sidebar: {"position":"left","display":"post","offset":12,"b2t":false,"scrollpercent":false,"onmobile":true},
+    fancybox: true,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    duoshuo: {
+      userId: '0',
+      author: '博主'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="http://thaning0.github.io.git/2017/12/22/a/"/>
+
+
+
+
+
+  <title>test | Than0's BLOG</title>
+  
+
+
+
+
+
+
+
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/"  class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">Than0's BLOG</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle">天道酬勤</p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-about">
+          <a href="/about/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-user"></i> <br />
+            
+            关于
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
+            
+            标签
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br />
+            
+            分类
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            归档
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://thaning0.github.io.git/2017/12/22/a/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="than.ninG0">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Than0's BLOG">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">test</h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-12-22T00:00:00+08:00">
+                2017-12-22
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <h1 id="Mathjax基本用法"><a href="#Mathjax基本用法" class="headerlink" title="Mathjax基本用法"></a>Mathjax基本用法</h1><p>[toc]</p>
+<h2 id="1-输入"><a href="#1-输入" class="headerlink" title="1.输入"></a>1.输入</h2><h3 id="1-1输入公式"><a href="#1-1输入公式" class="headerlink" title="1.1输入公式"></a>1.1输入公式</h3><ul>
+<li>行中式：<code>$...$</code></li>
+<li>单独行：<code>$$...$$</code></li>
+</ul>
+<h3 id="1-2输入数字与英文字母"><a href="#1-2输入数字与英文字母" class="headerlink" title="1.2输入数字与英文字母"></a>1.2输入数字与英文字母</h3><table>
+<thead>
+<tr>
+<th style="text-align:center">字体</th>
+<th style="text-align:center">代码</th>
+<th style="text-align:center">效果</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">空心字体</td>
+<td style="text-align:center"><code>\mathbb{ABC123}</code></td>
+<td style="text-align:center">$ \mathbb{ABC123} $</td>
+</tr>
+<tr>
+<td style="text-align:center">boldface字体</td>
+<td style="text-align:center"><code>\mathbf{ABC123}</code></td>
+<td style="text-align:center">$ \mathbf{ABC123} $</td>
+</tr>
+<tr>
+<td style="text-align:center">calligraphic字体</td>
+<td style="text-align:center"><code>\mathcal{ABC123}</code></td>
+<td style="text-align:center">$ \mathcal{ABC123} $</td>
+</tr>
+<tr>
+<td style="text-align:center">script字体</td>
+<td style="text-align:center"><code>\mathscr{ABC123}</code></td>
+<td style="text-align:center">$ \mathscr{ABC123} $</td>
+</tr>
+<tr>
+<td style="text-align:center">typewriter字体</td>
+<td style="text-align:center"><code>\mathtt{ABC123}</code></td>
+<td style="text-align:center">$ \mathtt{ABC123} $</td>
+</tr>
+<tr>
+<td style="text-align:center">roman字体</td>
+<td style="text-align:center"><code>\mathrm{ABC123}</code></td>
+<td style="text-align:center">$ \mathrm{ABC123} $</td>
+</tr>
+<tr>
+<td style="text-align:center">sans-0serif字体</td>
+<td style="text-align:center"><code>\mathsf{ABC123}</code></td>
+<td style="text-align:center">$ \mathsf{ABC123} $</td>
+</tr>
+<tr>
+<td style="text-align:center">Fraktur字体</td>
+<td style="text-align:center"><code>\mathfrak{ABC123}</code></td>
+<td style="text-align:center">$ \mathfrak{ABC123} $</td>
+</tr>
+</tbody>
+</table>
+<h3 id="1-3输入希腊字母"><a href="#1-3输入希腊字母" class="headerlink" title="1.3输入希腊字母"></a>1.3输入希腊字母</h3><table>
+<thead>
+<tr>
+<th style="text-align:center">名称</th>
+<th style="text-align:center">代码</th>
+<th style="text-align:center">效果</th>
+<th style="text-align:center">大写体代码</th>
+<th style="text-align:center">大写体效果</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">alpha</td>
+<td style="text-align:center"><code>\alpha</code></td>
+<td style="text-align:center">$\alpha$</td>
+<td style="text-align:center"></td>
+<td style="text-align:center"></td>
+</tr>
+<tr>
+<td style="text-align:center">beta</td>
+<td style="text-align:center"><code>\beta</code></td>
+<td style="text-align:center">$\beta$</td>
+<td style="text-align:center"></td>
+<td style="text-align:center"></td>
+</tr>
+<tr>
+<td style="text-align:center">gamma</td>
+<td style="text-align:center"><code>\gamma</code></td>
+<td style="text-align:center">$\gamma$</td>
+<td style="text-align:center"><code>\Gamma</code></td>
+<td style="text-align:center">$\Gamma$</td>
+</tr>
+<tr>
+<td style="text-align:center">delta</td>
+<td style="text-align:center"><code>\delta</code></td>
+<td style="text-align:center">$\delta$</td>
+<td style="text-align:center"><code>\Delta</code></td>
+<td style="text-align:center">$\Delta$</td>
+</tr>
+<tr>
+<td style="text-align:center">epsilon</td>
+<td style="text-align:center"><code>\epsilon</code></td>
+<td style="text-align:center">$\epsilon$</td>
+<td style="text-align:center"></td>
+<td style="text-align:center"></td>
+</tr>
+<tr>
+<td style="text-align:center">zeta</td>
+<td style="text-align:center"><code>\zeta</code></td>
+<td style="text-align:center">$\zeta$</td>
+<td style="text-align:center"></td>
+<td style="text-align:center"></td>
+</tr>
+<tr>
+<td style="text-align:center">eta</td>
+<td style="text-align:center"><code>\eta</code></td>
+<td style="text-align:center">$\eta$</td>
+<td style="text-align:center"></td>
+<td style="text-align:center"></td>
+</tr>
+<tr>
+<td style="text-align:center">theta</td>
+<td style="text-align:center"><code>\theta</code></td>
+<td style="text-align:center">$\theta$</td>
+<td style="text-align:center"><code>\Theta</code></td>
+<td style="text-align:center">$\Theta$</td>
+</tr>
+<tr>
+<td style="text-align:center">iota</td>
+<td style="text-align:center"><code>\iota</code></td>
+<td style="text-align:center">$\iota$</td>
+<td style="text-align:center"></td>
+<td style="text-align:center"></td>
+</tr>
+<tr>
+<td style="text-align:center">kappa</td>
+<td style="text-align:center"><code>\kappa</code></td>
+<td style="text-align:center">$\kappa$</td>
+<td style="text-align:center"></td>
+<td style="text-align:center"></td>
+</tr>
+<tr>
+<td style="text-align:center">lambda</td>
+<td style="text-align:center"><code>\lambda</code></td>
+<td style="text-align:center">$\lambda$</td>
+<td style="text-align:center"><code>\Lambda</code></td>
+<td style="text-align:center">$\Lambda$</td>
+</tr>
+<tr>
+<td style="text-align:center">mu</td>
+<td style="text-align:center"><code>\mu</code></td>
+<td style="text-align:center">$\mu$</td>
+<td style="text-align:center"></td>
+<td style="text-align:center"></td>
+</tr>
+<tr>
+<td style="text-align:center">nu</td>
+<td style="text-align:center"><code>\nu</code></td>
+<td style="text-align:center">$\nu$</td>
+<td style="text-align:center"></td>
+<td style="text-align:center"></td>
+</tr>
+<tr>
+<td style="text-align:center">xi</td>
+<td style="text-align:center"><code>\xi</code></td>
+<td style="text-align:center">$\xi$</td>
+<td style="text-align:center"><code>\Xi</code></td>
+<td style="text-align:center">$\Xi$</td>
+</tr>
+<tr>
+<td style="text-align:center">omicron</td>
+<td style="text-align:center"><code>\omicron</code></td>
+<td style="text-align:center">$\omicron$</td>
+<td style="text-align:center"></td>
+<td style="text-align:center"></td>
+</tr>
+<tr>
+<td style="text-align:center">pi</td>
+<td style="text-align:center"><code>\pi</code></td>
+<td style="text-align:center">$\pi$</td>
+<td style="text-align:center"><code>\Pi</code></td>
+<td style="text-align:center">$\Pi$</td>
+</tr>
+<tr>
+<td style="text-align:center">rho</td>
+<td style="text-align:center"><code>\rho</code></td>
+<td style="text-align:center">$\rho$</td>
+<td style="text-align:center"></td>
+<td style="text-align:center"></td>
+</tr>
+<tr>
+<td style="text-align:center">sigma</td>
+<td style="text-align:center"><code>\sigma</code></td>
+<td style="text-align:center">$\sigma$</td>
+<td style="text-align:center"><code>\Sigma</code></td>
+<td style="text-align:center">$\Sigma$</td>
+</tr>
+<tr>
+<td style="text-align:center">tau</td>
+<td style="text-align:center"><code>\tau</code></td>
+<td style="text-align:center">$\tau$</td>
+<td style="text-align:center"></td>
+<td style="text-align:center"></td>
+</tr>
+<tr>
+<td style="text-align:center">upsilon</td>
+<td style="text-align:center"><code>\upsilon</code></td>
+<td style="text-align:center">$\upsilon$</td>
+<td style="text-align:center"><code>\Upsilon</code></td>
+<td style="text-align:center">$\Upsilon$</td>
+</tr>
+<tr>
+<td style="text-align:center">phi</td>
+<td style="text-align:center"><code>\phi</code></td>
+<td style="text-align:center">$\phi$</td>
+<td style="text-align:center"><code>\Phi</code></td>
+<td style="text-align:center">$\Phi$</td>
+</tr>
+<tr>
+<td style="text-align:center">chi</td>
+<td style="text-align:center"><code>\chi</code></td>
+<td style="text-align:center">$\chi$</td>
+<td style="text-align:center"></td>
+<td style="text-align:center"></td>
+</tr>
+<tr>
+<td style="text-align:center">psi</td>
+<td style="text-align:center"><code>\psi</code></td>
+<td style="text-align:center">$\psi$</td>
+<td style="text-align:center"><code>\Psi</code></td>
+<td style="text-align:center">$\Psi$</td>
+</tr>
+<tr>
+<td style="text-align:center">omega</td>
+<td style="text-align:center"><code>\omega</code></td>
+<td style="text-align:center">$\omega$</td>
+<td style="text-align:center"><code>\Omega</code></td>
+<td style="text-align:center">$\Omega$</td>
+</tr>
+</tbody>
+</table>
+<h3 id="1-4输入矩阵"><a href="#1-4输入矩阵" class="headerlink" title="1.4输入矩阵"></a>1.4输入矩阵</h3><table>
+<thead>
+<tr>
+<th style="text-align:center">名称</th>
+<th style="text-align:center">代码</th>
+<th style="text-align:center">效果</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">matrix</td>
+<td style="text-align:center"><code>\begin{matrix} a &amp; b \\ c &amp; d \end{matrix}</code></td>
+<td style="text-align:center">$ \begin{matrix} a &amp; b  \  c &amp; d \end{matrix} $</td>
+</tr>
+<tr>
+<td style="text-align:center">pmatrix</td>
+<td style="text-align:center"><code>\begin{pmatrix} a &amp; b \\ c &amp; d \end{pmatrix}</code></td>
+<td style="text-align:center">$ \begin{pmatrix} a &amp; b \  c &amp; d \end{pmatrix} $</td>
+</tr>
+<tr>
+<td style="text-align:center">bmatrix</td>
+<td style="text-align:center"><code>\begin{bmatrix} a &amp; b \\ c &amp; d \end{bmatrix}</code></td>
+<td style="text-align:center">$ \begin{bmatrix} a &amp; b \  c &amp; d \end{bmatrix} $</td>
+</tr>
+<tr>
+<td style="text-align:center">Bmatrix</td>
+<td style="text-align:center"><code>\begin{Bmatrix} a &amp; b \\ c &amp; d \end{Bmatrix}</code></td>
+<td style="text-align:center">$ \begin{Bmatrix} a &amp; b \  c &amp; d \end{Bmatrix} $</td>
+</tr>
+<tr>
+<td style="text-align:center">vmatrix</td>
+<td style="text-align:center"><code>\begin{vmatrix} a &amp; b \\ c &amp; d \end{vmatrix}</code></td>
+<td style="text-align:center">$ \begin{vmatrix} a &amp; b \  c &amp; d \end{vmatrix} $</td>
+</tr>
+<tr>
+<td style="text-align:center">Vmatrix</td>
+<td style="text-align:center"><code>\begin{Vmatrix} a &amp; b \\ c &amp; d \end{Vmatrix}</code></td>
+<td style="text-align:center">$ \begin{Vmatrix} a &amp; b \  c &amp; d \end{Vmatrix} $</td>
+</tr>
+</tbody>
+</table>
+<h3 id="1-5输入表格"><a href="#1-5输入表格" class="headerlink" title="1.5输入表格"></a>1.5输入表格</h3><p>使用<code>\begin{array}{列样式}...\end{array}</code>这样的形式来创建表格,，列样式可以是c l r分别表示居中，左，右对齐，还可以使用|表示一条竖线。表格中各行使用\分隔，各列使用&amp;分隔，使用\hline在本行前加入一条直线。例如:<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">$$</span><br><span class="line">\begin&#123;array&#125;&#123;c|lcr&#125;</span><br><span class="line">n &amp; \text&#123;Left&#125; &amp; \text&#123;Center&#125; &amp; \text&#123;Right&#125; \\</span><br><span class="line">\hline 1 &amp; 0.24 &amp; 1 &amp; 125 \\</span><br><span class="line">2 &amp; -1 &amp; 189 &amp; -8 \\</span><br><span class="line">3 &amp; -20 &amp; 2000 &amp; 1+10i \\</span><br><span class="line">\end&#123;array&#125;</span><br><span class="line">$$</span><br></pre></td></tr></table></figure></p>
+<p>$$<br>\begin{array}{c|lcr}<br>n &amp; \text{Left} &amp; \text{Center} &amp; \text{Right} \<br>\hline 1 &amp; 0.24 &amp; 1 &amp; 125 \<br>2 &amp; -1 &amp; 189 &amp; -8 \<br>3 &amp; -20 &amp; 2000 &amp; 1+10i \<br>\end{array}<br>$$</p>
+<h3 id="1-6输入文字"><a href="#1-6输入文字" class="headerlink" title="1.6输入文字"></a>1.6输入文字</h3><p><code>\text{ABC123}</code><br>$$\text{ABC123}$$</p>
+<h2 id="2-标记"><a href="#2-标记" class="headerlink" title="2.标记"></a>2.标记</h2><h3 id="2-1字符标记"><a href="#2-1字符标记" class="headerlink" title="2.1字符标记"></a>2.1字符标记</h3><table>
+<thead>
+<tr>
+<th style="text-align:center">名称</th>
+<th style="text-align:center">代码</th>
+<th style="text-align:center">效果</th>
+<th style="text-align:center">名称</th>
+<th style="text-align:center">代码</th>
+<th style="text-align:center">效果</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">上标</td>
+<td style="text-align:center"><code>A^{a}</code></td>
+<td style="text-align:center">$ A^{a} $</td>
+<td style="text-align:center">下标</td>
+<td style="text-align:center"><code>A_{a}</code></td>
+<td style="text-align:center">$ A_{a} $</td>
+</tr>
+<tr>
+<td style="text-align:center">左上标</td>
+<td style="text-align:center"><code>\sideset{^a}{}A</code></td>
+<td style="text-align:center">$ \sideset{^a}{}A $</td>
+<td style="text-align:center">左下标</td>
+<td style="text-align:center"><code>\sideset{_a}{}A</code></td>
+<td style="text-align:center">$\sideset{_a}{}A$</td>
+</tr>
+<tr>
+<td style="text-align:center">上下标</td>
+<td style="text-align:center"><code>A^{a}_b</code></td>
+<td style="text-align:center">$ A^{a}_b $</td>
+<td style="text-align:center">四个标记</td>
+<td style="text-align:center"><code>\sideset{^a_b}{^c_d}A</code></td>
+<td style="text-align:center">$\sideset{^a_b}{^c_d}A$</td>
+</tr>
+<tr>
+<td style="text-align:center">hat</td>
+<td style="text-align:center"><code>\hat{A}</code></td>
+<td style="text-align:center">$\hat{A}$</td>
+<td style="text-align:center">check</td>
+<td style="text-align:center"><code>\check{A}</code></td>
+<td style="text-align:center">$\check{A}$</td>
+</tr>
+<tr>
+<td style="text-align:center">breve</td>
+<td style="text-align:center"><code>\breve{A}</code></td>
+<td style="text-align:center">$\breve{A}$</td>
+<td style="text-align:center">tilde</td>
+<td style="text-align:center"><code>\tilde{A}</code></td>
+<td style="text-align:center">$\tilde{A}$</td>
+</tr>
+<tr>
+<td style="text-align:center">dot</td>
+<td style="text-align:center"><code>\dot{A}</code></td>
+<td style="text-align:center">$\dot{A}$</td>
+<td style="text-align:center">ddot</td>
+<td style="text-align:center"><code>\ddot{A}</code></td>
+<td style="text-align:center">$\ddot{A}$</td>
+</tr>
+<tr>
+<td style="text-align:center">vec</td>
+<td style="text-align:center"><code>\vec{A}</code></td>
+<td style="text-align:center">$\vec{A}$</td>
+<td style="text-align:center"></td>
+<td style="text-align:center"></td>
+<td style="text-align:center"></td>
+</tr>
+<tr>
+<td style="text-align:center">overline</td>
+<td style="text-align:center"><code>\overline{AB}</code></td>
+<td style="text-align:center">$\overline{AB}$</td>
+<td style="text-align:center">underline</td>
+<td style="text-align:center"><code>\underline{AB}</code></td>
+<td style="text-align:center">$\underline{AB}$</td>
+</tr>
+<tr>
+<td style="text-align:center">widehat</td>
+<td style="text-align:center"><code>\widehat{AB}</code></td>
+<td style="text-align:center">$\widehat{AB}$</td>
+<td style="text-align:center">overarrow</td>
+<td style="text-align:center"><code>\overrightarrow{AB}</code></td>
+<td style="text-align:center">$\overrightarrow{AB}$</td>
+</tr>
+<tr>
+<td style="text-align:center">overarrow</td>
+<td style="text-align:center"><code>\overleftrightarrow{AB}</code></td>
+<td style="text-align:center">$\overleftrightarrow{AB}$</td>
+<td style="text-align:center"></td>
+<td style="text-align:center"></td>
+</tr>
+</tbody>
+</table>
+<h3 id="2-2括号"><a href="#2-2括号" class="headerlink" title="2.2括号"></a>2.2括号</h3><table>
+<thead>
+<tr>
+<th style="text-align:center">名称</th>
+<th style="text-align:center">代码</th>
+<th style="text-align:center">效果</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">小括号</td>
+<td style="text-align:center"><code>() \{\} []</code></td>
+<td style="text-align:center">$(){}[]$</td>
+</tr>
+<tr>
+<td style="text-align:center">大括号(自适应放大)</td>
+<td style="text-align:center"><code>\left\{...\right\}$</code></td>
+<td style="text-align:center">$\left{ A^{a^1} \right}$</td>
+</tr>
+<tr>
+<td style="text-align:center">尖括号</td>
+<td style="text-align:center"><code>\langle A\rangle</code></td>
+<td style="text-align:center">$\langle A\rangle$</td>
+</tr>
+<tr>
+<td style="text-align:center">上取整</td>
+<td style="text-align:center"><code>\lceil A\rceil</code></td>
+<td style="text-align:center">$\lceil A\rceil$</td>
+</tr>
+<tr>
+<td style="text-align:center">下取整</td>
+<td style="text-align:center"><code>\lfloor A\rfloor</code></td>
+<td style="text-align:center">$\lfloor A\rfloor$</td>
+</tr>
+<tr>
+<td style="text-align:center">隐藏括号</td>
+<td style="text-align:center"><code>\left.\right\}</code></td>
+<td style="text-align:center">$\left.\right}$</td>
+</tr>
+</tbody>
+</table>
+<h3 id="2-3箭头"><a href="#2-3箭头" class="headerlink" title="2.3箭头"></a>2.3箭头</h3><table>
+<thead>
+<tr>
+<th style="text-align:center">名称</th>
+<th style="text-align:center">代码</th>
+<th style="text-align:center">效果</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">右箭头</td>
+<td style="text-align:center"><code>\to,\rightarrow\Rightarrow</code></td>
+<td style="text-align:center">$\to,\rightarrow,\Rightarrow$</td>
+</tr>
+<tr>
+<td style="text-align:center">左箭头</td>
+<td style="text-align:center"><code>\leftarrow,\Leftarrow</code></td>
+<td style="text-align:center">$\leftarrow,\Leftarrow$</td>
+</tr>
+<tr>
+<td style="text-align:center">映射</td>
+<td style="text-align:center"><code>\mapsto</code></td>
+<td style="text-align:center">$\mapsto$</td>
+</tr>
+</tbody>
+</table>
+<h3 id="2-4其他标记"><a href="#2-4其他标记" class="headerlink" title="2.4其他标记"></a>2.4其他标记</h3><ul>
+<li>公式标号:<code>f(x)\tag{1.1}</code>$$f(x)\tag{1.1}$$</li>
+<li>隐藏公式标号:<code>\nonumber</code></li>
+<li>无穷号:<code>\infty</code>$\infty$</li>
+<li>梯度符号:<code>\nabla</code>$\nabla$</li>
+<li>偏导符号:<code>\partial</code>$\partial$</li>
+<li>省略号:<code>\ldots,\cdots</code>$\ldots,\cdots$</li>
+</ul>
+<h2 id="3-运算"><a href="#3-运算" class="headerlink" title="3.运算"></a>3.运算</h2><h3 id="3-1基本运算"><a href="#3-1基本运算" class="headerlink" title="3.1基本运算"></a>3.1基本运算</h3><table>
+<thead>
+<tr>
+<th style="text-align:center">名称</th>
+<th style="text-align:center">代码</th>
+<th style="text-align:center">效果</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">叉乘</td>
+<td style="text-align:center"><code>\times</code></td>
+<td style="text-align:center">$\times$</td>
+</tr>
+<tr>
+<td style="text-align:center">点乘</td>
+<td style="text-align:center"><code>\cdot</code></td>
+<td style="text-align:center">$\cdot$</td>
+</tr>
+<tr>
+<td style="text-align:center">除</td>
+<td style="text-align:center"><code>\div</code></td>
+<td style="text-align:center">$\div$</td>
+</tr>
+<tr>
+<td style="text-align:center">分式</td>
+<td style="text-align:center"><code>\frac{a}{b},\cfrac{a}{b}</code></td>
+<td style="text-align:center">$\frac{a}{b},\cfrac{a}{b}$</td>
+</tr>
+<tr>
+<td style="text-align:center">加减</td>
+<td style="text-align:center"><code>\pm \mp</code></td>
+<td style="text-align:center">$\pm \mp$</td>
+</tr>
+</tbody>
+</table>
+<h3 id="3-2等号不等号"><a href="#3-2等号不等号" class="headerlink" title="3.2等号不等号"></a>3.2等号不等号</h3><table>
+<thead>
+<tr>
+<th style="text-align:center">名称</th>
+<th style="text-align:center">代码</th>
+<th style="text-align:center">效果</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">恒等于</td>
+<td style="text-align:center"><code>\equiv</code></td>
+<td style="text-align:center">$\equiv$</td>
+</tr>
+<tr>
+<td style="text-align:center">约等于</td>
+<td style="text-align:center"><code>\approx,\cong</code></td>
+<td style="text-align:center">$\approx,\cong$</td>
+</tr>
+<tr>
+<td style="text-align:center">等价</td>
+<td style="text-align:center"><code>\sim</code></td>
+<td style="text-align:center">$\sim$</td>
+</tr>
+<tr>
+<td style="text-align:center">小于</td>
+<td style="text-align:center"><code>\lt,\le</code></td>
+<td style="text-align:center">$\lt,\le$</td>
+</tr>
+<tr>
+<td style="text-align:center">大于</td>
+<td style="text-align:center"><code>\gt,\ge</code></td>
+<td style="text-align:center">$\gt,\ge$</td>
+</tr>
+<tr>
+<td style="text-align:center">不等</td>
+<td style="text-align:center"><code>\neq</code></td>
+<td style="text-align:center">$\neq$</td>
+</tr>
+<tr>
+<td style="text-align:center">广义小于</td>
+<td style="text-align:center"><code>\prec,\preceq</code></td>
+<td style="text-align:center">$\prec,\preceq$</td>
+</tr>
+<tr>
+<td style="text-align:center">广义大于</td>
+<td style="text-align:center"><code>\succ,\succeq</code></td>
+<td style="text-align:center">$\succ,\succeq$</td>
+</tr>
+</tbody>
+</table>
+<h3 id="3-3集合"><a href="#3-3集合" class="headerlink" title="3.3集合"></a>3.3集合</h3><table>
+<thead>
+<tr>
+<th style="text-align:center">名称</th>
+<th style="text-align:center">代码</th>
+<th style="text-align:center">效果</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">并</td>
+<td style="text-align:center"><code>\cup</code></td>
+<td style="text-align:center">$\cup $</td>
+</tr>
+<tr>
+<td style="text-align:center">交</td>
+<td style="text-align:center"><code>\cap</code></td>
+<td style="text-align:center">$\cap $</td>
+</tr>
+<tr>
+<td style="text-align:center">差</td>
+<td style="text-align:center"><code>\setminus</code></td>
+<td style="text-align:center">$\setminus $</td>
+</tr>
+<tr>
+<td style="text-align:center">严格包含</td>
+<td style="text-align:center"><code>\supset,\subset</code></td>
+<td style="text-align:center">$\supset,\subset $</td>
+</tr>
+<tr>
+<td style="text-align:center">包含</td>
+<td style="text-align:center"><code>\subseteq</code></td>
+<td style="text-align:center">$\subseteq $</td>
+</tr>
+<tr>
+<td style="text-align:center">不包含</td>
+<td style="text-align:center"><code>\subsetneq</code></td>
+<td style="text-align:center">$\subsetneq $</td>
+</tr>
+<tr>
+<td style="text-align:center">属于</td>
+<td style="text-align:center"><code>\in</code></td>
+<td style="text-align:center">$\in $</td>
+</tr>
+<tr>
+<td style="text-align:center">不属于</td>
+<td style="text-align:center"><code>\notin</code></td>
+<td style="text-align:center">$\notin $</td>
+</tr>
+<tr>
+<td style="text-align:center">空集</td>
+<td style="text-align:center"><code>\emptyset,\varnothing</code></td>
+<td style="text-align:center">$\emptyset,\varnothing $</td>
+</tr>
+</tbody>
+</table>
+<h3 id="3-4逻辑"><a href="#3-4逻辑" class="headerlink" title="3.4逻辑"></a>3.4逻辑</h3><table>
+<thead>
+<tr>
+<th style="text-align:center">名称</th>
+<th style="text-align:center">代码</th>
+<th style="text-align:center">效果</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">land</td>
+<td style="text-align:center"><code>\land</code></td>
+<td style="text-align:center">$\land$</td>
+</tr>
+<tr>
+<td style="text-align:center">lor</td>
+<td style="text-align:center"><code>\lor</code></td>
+<td style="text-align:center">$ \lor$</td>
+</tr>
+<tr>
+<td style="text-align:center">lnot</td>
+<td style="text-align:center"><code>\lnot</code></td>
+<td style="text-align:center">$ \lnot$</td>
+</tr>
+<tr>
+<td style="text-align:center">forall</td>
+<td style="text-align:center"><code>\forall</code></td>
+<td style="text-align:center">$ \forall$</td>
+</tr>
+<tr>
+<td style="text-align:center">exists</td>
+<td style="text-align:center"><code>\exists</code></td>
+<td style="text-align:center">$ \exists$</td>
+</tr>
+<tr>
+<td style="text-align:center">top</td>
+<td style="text-align:center"><code>\top</code></td>
+<td style="text-align:center">$ \top$</td>
+</tr>
+<tr>
+<td style="text-align:center">bot</td>
+<td style="text-align:center"><code>\bot</code></td>
+<td style="text-align:center">$ \bot$</td>
+</tr>
+<tr>
+<td style="text-align:center">vdash</td>
+<td style="text-align:center"><code>\vdash</code></td>
+<td style="text-align:center">$ \vdash$</td>
+</tr>
+<tr>
+<td style="text-align:center">vDash</td>
+<td style="text-align:center"><code>\vDash</code></td>
+<td style="text-align:center">$ \vDash$</td>
+</tr>
+</tbody>
+</table>
+<h3 id="3-5大型运算符"><a href="#3-5大型运算符" class="headerlink" title="3.5大型运算符"></a>3.5大型运算符</h3><table>
+<thead>
+<tr>
+<th style="text-align:center">名称</th>
+<th style="text-align:center">代码</th>
+<th style="text-align:center">效果</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">求和</td>
+<td style="text-align:center"><code>\sum_{i=1}^n</code></td>
+<td style="text-align:center">$\sum_{i=1}^n$</td>
+</tr>
+<tr>
+<td style="text-align:center">求积</td>
+<td style="text-align:center"><code>\prod_{i=1}^n</code></td>
+<td style="text-align:center">$\prod_{i=1}^n$</td>
+</tr>
+<tr>
+<td style="text-align:center">并</td>
+<td style="text-align:center"><code>\bigcup_{i=1}^n</code></td>
+<td style="text-align:center">$\bigcup_{i=1}^n$</td>
+</tr>
+<tr>
+<td style="text-align:center">交</td>
+<td style="text-align:center"><code>\bigcap_{i=1}^n</code></td>
+<td style="text-align:center">$\bigcap_{i=1}^n$</td>
+</tr>
+<tr>
+<td style="text-align:center">极限</td>
+<td style="text-align:center"><code>\lim_{x\to 0}</code></td>
+<td style="text-align:center">$\lim_{x\to 0}$</td>
+</tr>
+<tr>
+<td style="text-align:center">积分</td>
+<td style="text-align:center"><code>\int_{X}</code></td>
+<td style="text-align:center">$\int_{X}$</td>
+</tr>
+<tr>
+<td style="text-align:center">重积分</td>
+<td style="text-align:center"><code>\iint_{X}</code></td>
+<td style="text-align:center">$\iint_{X}$</td>
+</tr>
+</tbody>
+</table>
+<h2 id="4-排版"><a href="#4-排版" class="headerlink" title="4.排版"></a>4.排版</h2><h3 id="4-1插入空格"><a href="#4-1插入空格" class="headerlink" title="4.1插入空格"></a>4.1插入空格</h3><table>
+<thead>
+<tr>
+<th>代码</th>
+<th>效果</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>a\,b</code></td>
+<td>$a\,b$</td>
+</tr>
+<tr>
+<td><code>a\;b</code></td>
+<td>$a\;b$</td>
+</tr>
+<tr>
+<td><code>a\quad b</code></td>
+<td>$a\quad b$</td>
+</tr>
+<tr>
+<td><code>a\qquad b</code></td>
+<td>$a\qquad b$</td>
+</tr>
+</tbody>
+</table>
+<h3 id="4-2对齐"><a href="#4-2对齐" class="headerlink" title="4.2对齐"></a>4.2对齐</h3><p>用<code>\begin{align}...\end{align}</code>的格式输入,在其中插入&amp;来指示需要对齐的位置,例如对齐等号<br>$$<br>\begin{align}<br>a_1+a_2 &amp;=1\nonumber \<br>a_3 &amp;= a_4+a_5\nonumber<br>\end{align}<br>$$</p>
+
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2017/12/22/hello-world/" rel="prev" title="Hello World">
+                Hello World <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+
+  
+
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+      <div id="sidebar-dimmer"></div>
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview-wrap sidebar-panel">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+            
+              <p class="site-author-name" itemprop="name">than.ninG0</p>
+              <p class="site-description motion-element" itemprop="description"></p>
+          </div>
+
+          <nav class="site-state motion-element">
+
+            
+              <div class="site-state-item site-state-posts">
+              
+                <a href="/archives/">
+              
+                  <span class="site-state-item-count">2</span>
+                  <span class="site-state-item-name">日志</span>
+                </a>
+              </div>
+            
+
+            
+
+            
+
+          </nav>
+
+          
+
+          <div class="links-of-author motion-element">
+            
+          </div>
+
+          
+          
+
+          
+          
+
+          
+
+        </div>
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#Mathjax基本用法"><span class="nav-text">Mathjax基本用法</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#1-输入"><span class="nav-text">1.输入</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-1输入公式"><span class="nav-text">1.1输入公式</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#1-2输入数字与英文字母"><span class="nav-text">1.2输入数字与英文字母</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#1-3输入希腊字母"><span class="nav-text">1.3输入希腊字母</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#1-4输入矩阵"><span class="nav-text">1.4输入矩阵</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#1-5输入表格"><span class="nav-text">1.5输入表格</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#1-6输入文字"><span class="nav-text">1.6输入文字</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-标记"><span class="nav-text">2.标记</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#2-1字符标记"><span class="nav-text">2.1字符标记</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-2括号"><span class="nav-text">2.2括号</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-3箭头"><span class="nav-text">2.3箭头</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-4其他标记"><span class="nav-text">2.4其他标记</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#3-运算"><span class="nav-text">3.运算</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#3-1基本运算"><span class="nav-text">3.1基本运算</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-2等号不等号"><span class="nav-text">3.2等号不等号</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-3集合"><span class="nav-text">3.3集合</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-4逻辑"><span class="nav-text">3.4逻辑</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-5大型运算符"><span class="nav-text">3.5大型运算符</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#4-排版"><span class="nav-text">4.排版</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#4-1插入空格"><span class="nav-text">4.1插入空格</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#4-2对齐"><span class="nav-text">4.2对齐</span></a></li></ol></li></ol></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">&copy; <span itemprop="copyrightYear">2017</span>
+  <span class="with-love">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">than.ninG0</span>
+
+  
+</div>
+
+
+  <div class="powered-by">由 <a class="theme-link" target="_blank" href="https://hexo.io">Hexo</a> 强力驱动</div>
+
+
+
+  <span class="post-meta-divider">|</span>
+
+
+
+  <div class="theme-info">主题 &mdash; <a class="theme-link" target="_blank" href="https://github.com/iissnan/hexo-theme-next">NexT.Gemini</a> v5.1.3</div>
+
+
+
+
+        
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+  
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.3"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.3"></script>
+
+
+
+  
+  
+
+
+  <script type="text/javascript" src="/js/src/affix.js?v=5.1.3"></script>
+
+  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=5.1.3"></script>
+
+
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.3"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.3"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.3"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+  
+
+  
+  
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Config({
+        tex2jax: {
+          inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
+          processEscapes: true,
+          skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+        }
+      });
+    </script>
+
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax(), i;
+        for (i=0; i < all.length; i += 1) {
+          all[i].SourceElement().parentNode.className += ' has-jax';
+        }
+      });
+    </script>
+    <script type="text/javascript" src="//cdn.bootcss.com/mathjax/2.7.1/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+  
+
+
+  
+
+  
+
+</body>
+</html>
