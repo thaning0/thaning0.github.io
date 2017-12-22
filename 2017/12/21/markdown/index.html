@@ -12,8 +12,19 @@
 
 
 
+  
+  
+    
+    
+  <script src="/lib/pace/pace.min.js?v=1.0.2"></script>
+  <link href="/lib/pace/pace-theme-minimal.min.css?v=1.0.2" rel="stylesheet">
 
 
+
+
+  
+  
+  <link rel="stylesheet" media="all" href="/lib/Han/dist/han.min.css?v=3.3">
 
 
 
@@ -51,18 +62,22 @@
 <link href="/css/main.css?v=5.1.3" rel="stylesheet" type="text/css" />
 
 
-  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=5.1.3">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png?v=5.1.3">
 
 
-  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=5.1.3">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32.png?v=5.1.3">
 
 
-  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=5.1.3">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16.png?v=5.1.3">
 
 
-  <link rel="mask-icon" href="/images/logo.svg?v=5.1.3" color="#222">
+  <link rel="mask-icon" href="/images/safari-pinned-tab.svg?v=5.1.3" color="#222">
 
 
+  <link rel="manifest" href="/images/manifest.json">
+
+
+  <meta name="msapplication-config" content="/images/browserconfig.xml" />
 
 
 
@@ -81,11 +96,11 @@
 <meta name="keywords" content="markdown">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Markdown">
-<meta property="og:url" content="http://thaning0.github.io.git/2017/12/22/markdown/index.html">
+<meta property="og:url" content="http://thaning0.github.io.git/2017/12/21/markdown/index.html">
 <meta property="og:site_name" content="唐漢〇〇〇">
 <meta property="og:description" content="标题引用/参考 Markdown 是一种轻量级标记语言，它允许人们使用易读易写的纯文本格式编写文档，然后转换成格式丰富的HTML页面。    —— 维基百科  正如您在阅读的这份文档，它使用简单的符号标识不同的标题，将某些文字标记为粗体或者斜体，创建一个链接或MultiMarkdown文档或着脚注^1。">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2017-12-22T10:53:38.729Z">
+<meta property="og:updated_time" content="2017-12-22T16:36:50.434Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Markdown">
 <meta name="twitter:description" content="标题引用/参考 Markdown 是一种轻量级标记语言，它允许人们使用易读易写的纯文本格式编写文档，然后转换成格式丰富的HTML页面。    —— 维基百科  正如您在阅读的这份文档，它使用简单的符号标识不同的标题，将某些文字标记为粗体或者斜体，创建一个链接或MultiMarkdown文档或着脚注^1。">
@@ -98,7 +113,7 @@
     root: '/',
     scheme: 'Muse',
     version: '5.1.3',
-    sidebar: {"position":"left","display":"post","offset":12,"b2t":false,"scrollpercent":false,"onmobile":true},
+    sidebar: {"position":"left","display":"post","offset":12,"b2t":false,"scrollpercent":true,"onmobile":true},
     fancybox: true,
     tabs: true,
     motion: {"enable":false,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
@@ -118,7 +133,7 @@
 
 
 
-  <link rel="canonical" href="http://thaning0.github.io.git/2017/12/22/markdown/"/>
+  <link rel="canonical" href="http://thaning0.github.io.git/2017/12/21/markdown/"/>
 
 
 
@@ -295,12 +310,12 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://thaning0.github.io.git/2017/12/22/markdown/">
+    <link itemprop="mainEntityOfPage" href="http://thaning0.github.io.git/2017/12/21/markdown/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="than.ninG0">
+      <meta itemprop="name" content="唐漢〇〇〇">
       <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="image" content="/images/p1323035781.jpg">
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
@@ -324,8 +339,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-12-22T00:00:00+08:00">
-                2017-12-22
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-12-21T00:00:00+08:00">
+                2017-12-21
               </time>
             
 
@@ -383,7 +398,7 @@
     
     
     
-    <div class="post-body" itemprop="articleBody">
+    <div class="post-body han-init-context" itemprop="articleBody">
 
       
       
@@ -394,7 +409,7 @@
 </blockquote>
 <p>正如您在阅读的这份文档，它使用简单的符号标识不同的标题，将某些文字标记为<strong>粗体</strong>或者<em>斜体</em>，创建一个<a href="http://www.example.com" target="_blank" rel="noopener">链接</a>或<a href="https://github.com/fletcher/MultiMarkdown/wiki/MultiMarkdown-Syntax-Guide#footnotes" target="_blank" rel="noopener">MultiMarkdown文档</a>或着脚注<a href="这是一个脚注">^1</a>。</p>
 <a id="more"></a>
-<h2 id="链接"><a href="#链接" class="headerlink" title="链接"></a>链接</h2><p><a href="http://www.baidu.com" target="_blank" rel="noopener">http://www.baidu.com</a><br><a href="&#x6d;&#x61;&#x69;&#108;&#116;&#x6f;&#58;&#97;&#98;&#99;&#64;&#x61;&#x62;&#99;&#x2e;&#x63;&#111;&#109;">&#97;&#98;&#99;&#64;&#x61;&#x62;&#99;&#x2e;&#x63;&#111;&#109;</a></p>
+<h2 id="链接"><a href="#链接" class="headerlink" title="链接"></a>链接</h2><p><a href="http://www.baidu.com" target="_blank" rel="noopener">http://www.baidu.com</a><br><a href="&#109;&#97;&#x69;&#x6c;&#116;&#111;&#x3a;&#x61;&#x62;&#99;&#x40;&#97;&#x62;&#x63;&#x2e;&#99;&#111;&#x6d;">&#x61;&#x62;&#99;&#x40;&#97;&#x62;&#x63;&#x2e;&#99;&#111;&#x6d;</a></p>
 <h2 id="列表"><a href="#列表" class="headerlink" title="列表"></a>列表</h2><h3 id="使用-，-，-表示无序列表"><a href="#使用-，-，-表示无序列表" class="headerlink" title="使用*，+，-表示无序列表"></a>使用*，+，-表示无序列表</h3><ul>
 <li>1</li>
 </ul>
@@ -489,15 +504,15 @@ printf(&quot;Hello world\n&quot;);
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2017/12/22/mathjax/" rel="next" title="Mathjax基本用法">
-                <i class="fa fa-chevron-left"></i> Mathjax基本用法
-              </a>
-            
           </div>
 
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2017/12/22/mathjax/" rel="prev" title="Mathjax基本用法">
+                Mathjax基本用法 <i class="fa fa-chevron-right"></i>
+              </a>
             
           </div>
         </div>
@@ -565,7 +580,11 @@ printf(&quot;Hello world\n&quot;);
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
-              <p class="site-author-name" itemprop="name">than.ninG0</p>
+              <img class="site-author-image" itemprop="image"
+                src="/images/p1323035781.jpg"
+                alt="唐漢〇〇〇" />
+            
+              <p class="site-author-name" itemprop="name">唐漢〇〇〇</p>
               <p class="site-description motion-element" itemprop="description"></p>
           </div>
 
@@ -609,6 +628,20 @@ printf(&quot;Hello world\n&quot;);
           
 
           <div class="links-of-author motion-element">
+            
+              
+                <span class="links-of-author-item">
+                  <a href="https://github.com/thaning0" target="_blank" title="GitHub">
+                    
+                      <i class="fa fa-fw fa-github"></i>GitHub</a>
+                </span>
+              
+                <span class="links-of-author-item">
+                  <a href="than.ning0@outlook.com" target="_blank" title="E-Mail">
+                    
+                      <i class="fa fa-fw fa-envelope"></i>E-Mail</a>
+                </span>
+              
             
           </div>
 
@@ -657,7 +690,7 @@ printf(&quot;Hello world\n&quot;);
   <span class="with-love">
     <i class="fa fa-user"></i>
   </span>
-  <span class="author" itemprop="copyrightHolder">than.ninG0</span>
+  <span class="author" itemprop="copyrightHolder">唐漢〇〇〇</span>
 
   
 </div>
@@ -711,6 +744,8 @@ printf(&quot;Hello world\n&quot;);
     
       <div class="back-to-top">
         <i class="fa fa-arrow-up"></i>
+        
+          <span id="scrollpercent"><span>0</span>%</span>
         
       </div>
     
