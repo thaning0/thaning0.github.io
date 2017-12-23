@@ -325,7 +325,7 @@
         
           <h1 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/2017/12/23/submitmyblog/" itemprop="url">未命名</a></h1>
+                <a class="post-title-link" href="/2017/12/23/submitmyblog/" itemprop="url">Markdown</a></h1>
         
 
         <div class="post-meta">
@@ -347,6 +347,28 @@
             
           </span>
 
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Tutorial/" itemprop="url" rel="index">
+                    <span itemprop="name">Tutorial</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
           
 
           
@@ -376,18 +398,20 @@
 
       
         
-          
-            <h2 id="向google提交博客"><a href="#向google提交博客" class="headerlink" title="向google提交博客"></a>向google提交博客</h2><p>安装sitemap插件</p>
-<p>向google提交<a href="https://www.google.com/webmasters/tools/home?hl=zh-CN" target="_blank" rel="noopener">点这里</a></p>
-<p>首先需要验证网站,验证的HTML文件需要直接放在public文件夹下(做好备份,public中的文件会被hexo clean清除),然后直接发布</p>
-<p>然后选择站点,选择站点地图,提交站点地图</p>
-<p>遇到问题,插件生成的sitamap中url为thaning0.github.io.git 导致错误<br>(错误原因 -config.yml中url设置错误)</p>
-<p>在webmasters可以看到成功提交的网页数</p>
-<h2 id="向百度提交博客"><a href="#向百度提交博客" class="headerlink" title="向百度提交博客"></a>向百度提交博客</h2><p>因为github屏蔽了百度爬虫,使用主动提交连接的方法 参考<a href="http://hui-wang.info/2016/10/23/Hexo%E6%8F%92%E4%BB%B6%E4%B9%8B%E7%99%BE%E5%BA%A6%E4%B8%BB%E5%8A%A8%E6%8F%90%E4%BA%A4%E9%93%BE%E6%8E%A5/" target="_blank" rel="noopener">王辉的博客</a></p>
-<p>在<a href="http://ziyuan.baidu.com/" target="_blank" rel="noopener">百度资源</a>认证网站,然后选择链接提交</p>
-<p>安装<a href="https://github.com/huiwang/hexo-baidu-url-submit" target="_blank" rel="noopener">hexo-baidu-url-submit</a>插件</p>
-
-          
+          <h2 id="向google提交博客sitemap"><a href="#向google提交博客sitemap" class="headerlink" title="向google提交博客sitemap"></a>向google提交博客sitemap</h2><ol>
+<li><p>安装sitemap插件</p>
+ <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">npm install hexo-generator-sitemap</span><br><span class="line">npm install hexo-generator-baidu-sitemap</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>登陆<a href="(https://www.google.com/webmasters/tools/home?hl=zh-CN)">google站长</a>验证网站,验证的HTML文件需要直接放在public文件夹下(做好备份,public中的文件会被hexo clean清除),然后直接发布<code>hexo d</code></p>
+</li>
+</ol>
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/2017/12/23/submitmyblog/" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
         
       
     </div>

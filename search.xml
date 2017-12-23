@@ -1,9 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title></title>
+    <title><![CDATA[Markdown]]></title>
     <url>%2F2017%2F12%2F23%2Fsubmitmyblog%2F</url>
-    <content type="text"><![CDATA[向google提交博客安装sitemap插件 向google提交点这里 首先需要验证网站,验证的HTML文件需要直接放在public文件夹下(做好备份,public中的文件会被hexo clean清除),然后直接发布 然后选择站点,选择站点地图,提交站点地图 遇到问题,插件生成的sitamap中url为thaning0.github.io.git 导致错误(错误原因 -config.yml中url设置错误) 在webmasters可以看到成功提交的网页数 向百度提交博客因为github屏蔽了百度爬虫,使用主动提交连接的方法 参考王辉的博客 在百度资源认证网站,然后选择链接提交 安装hexo-baidu-url-submit插件]]></content>
+    <content type="text"><![CDATA[向google提交博客sitemap 安装sitemap插件 12npm install hexo-generator-sitemapnpm install hexo-generator-baidu-sitemap 登陆google站长验证网站,验证的HTML文件需要直接放在public文件夹下(做好备份,public中的文件会被hexo clean清除),然后直接发布hexo d 然后选择站点,选择站点地图,提交站点地图,接着可以看到成功提交的网页数 &gt;期间遇到问题,插件生成的sitamap中url错误(错误原因 -config.yml中url设置错误) 向百度提交博客sitemap和推送更新因为github屏蔽了百度爬虫,所以提交了sitemap之后,百度也抓不到网站,使用主动提交连接的方法 参考王辉的博客该方法最好不要使用公开仓库,因为网站的源代码中会包括秘钥 在百度资源认证网站,然后选择链接提交,查看接口调用地址...&amp;token=cpoy这一串字符,别给别人看 安装hexo-baidu-url-submit插件 npm install hexo-baidu-url-submit --save 将以下代码加入hexo目录下的_config.yml: baidu_url_submit: count: 1 ## 提交最新的一个链接 host: https://thaning0.github.io ## 在百度站长平台中注册的域名 token: 刚刚copy的字符串 ## 请注意这是您的秘钥， 所以请不要把博客源代码发布在公众仓库里! path: baidu_urls.txt ## 文本文档的地址， 新链接会保存在此文本文档里 (所以如果你是使用的免费github pages,你需要私人仓库,github上学生可以申请免费的私人仓库,申请链接) 在_config.yml文件中的deploy:中加入type: baidu_url_submitter,注意两个tpye的前面需要加上-,例如: deploy: - type: example repository: https://example.com branch: example - type: baidu_url_submitter ## 推送给百度 最后执行hexo deploy,如果收到如下反馈则表示主动推送成功: { &quot;remain&quot;:4999999, &quot;success&quot;:1 } 可能返回如下字段 字段 是否必选 参数类型 说明 success 是 int 成功推送的url条数 remain 是 int 当天剩余的可推送url条数 not_same_site 否 array 未处理的非本站url列表 not_valid 否 array 不合法url列表]]></content>
+      <categories>
+        <category>Tutorial</category>
+      </categories>
+      <tags>
+        <tag>hexo</tag>
+      </tags>
   </entry>
   <entry>
     <title><![CDATA[开启next的站内搜索功能]]></title>
@@ -31,7 +37,7 @@
   <entry>
     <title><![CDATA[Markdown]]></title>
     <url>%2F2017%2F12%2F21%2Fmarkdown%2F</url>
-    <content type="text"><![CDATA[标题引用/参考 Markdown 是一种轻量级标记语言，它允许人们使用易读易写的纯文本格式编写文档，然后转换成格式丰富的HTML页面。 —— 维基百科 正如您在阅读的这份文档，它使用简单的符号标识不同的标题，将某些文字标记为粗体或者斜体，创建一个链接或MultiMarkdown文档或着脚注^1。 链接http://www.baidu.com&#97;&#x62;&#x63;&#x40;&#97;&#98;&#99;&#46;&#99;&#x6f;&#x6d; 列表使用*，+，-表示无序列表 1 2 3 使用数字加.表示有序列表 a b c 定义型列表冒号+TAB A: A B: B 锚点跳转12[点击](#ID)&lt;span id = &quot;ID&quot;&gt;&lt;/span&gt;#跳转到这里 代码代码块12345678910@requires_authorizationdef somefunc(param1='', param2=0): '''A docstring''' if param1 &gt; param2: # interesting print 'Greater' return (param2 - param1 + 1) or Noneclass SomeClass: pass&gt;&gt;&gt; message = '''interpreter... prompt''' #include &lt;stdio.h&gt; int main(void) { printf(&quot;Hello world\n&quot;); } 行内式代码这个函数code()怎么使用 LaTeX 公式（MathJax语法）可以创建行内公式，例如 $ \Gamma(n) = (n-1)!\quad\forall n\in\mathbb N $。或者块级公式： $$ x = \dfrac{-b \pm \sqrt{b^2 - 4ac}}{2a} $$ 表格 Item Value Qty Computer 1600 USD 5 Phone 12 USD 12 Pipe 1 USD 234 分割线 用Sublime编辑Markdown文件插件 Markdown Extended Markdown HTML Preview OmniMarkup Previewer （在浏览器中预览） MarkdownFootnotes （脚注） MarkdownHighlighting （高亮） MarkdownTOC （生存目录）]]></content>
+    <content type="text"><![CDATA[标题引用/参考 Markdown 是一种轻量级标记语言，它允许人们使用易读易写的纯文本格式编写文档，然后转换成格式丰富的HTML页面。 —— 维基百科 正如您在阅读的这份文档，它使用简单的符号标识不同的标题，将某些文字标记为粗体或者斜体，创建一个链接或MultiMarkdown文档或着脚注^1。 链接http://www.baidu.com&#x61;&#x62;&#99;&#x40;&#97;&#98;&#99;&#x2e;&#99;&#111;&#x6d; 列表使用*，+，-表示无序列表 1 2 3 使用数字加.表示有序列表 a b c 定义型列表冒号+TAB A: A B: B 锚点跳转12[点击](#ID)&lt;span id = &quot;ID&quot;&gt;&lt;/span&gt;#跳转到这里 代码代码块12345678910@requires_authorizationdef somefunc(param1='', param2=0): '''A docstring''' if param1 &gt; param2: # interesting print 'Greater' return (param2 - param1 + 1) or Noneclass SomeClass: pass&gt;&gt;&gt; message = '''interpreter... prompt''' 或者直接缩进一个制表符 #include &lt;stdio.h&gt; int main(void) { printf(&quot;Hello world\n&quot;); } 行内式代码这个函数code()怎么使用 LaTeX 公式（MathJax语法）可以创建行内公式，例如 $ \Gamma(n) = (n-1)!\quad\forall n\in\mathbb N $。或者块级公式： $$ x = \dfrac{-b \pm \sqrt{b^2 - 4ac}}{2a} $$ 表格 Item Value Qty Computer 1600 USD 5 Phone 12 USD 12 Pipe 1 USD 234 分割线 用Sublime编辑Markdown文件插件 Markdown Extended Markdown HTML Preview OmniMarkup Previewer （在浏览器中预览） MarkdownFootnotes （脚注） MarkdownHighlighting （高亮） MarkdownTOC （生存目录）]]></content>
       <categories>
         <category>Tutorial</category>
       </categories>
