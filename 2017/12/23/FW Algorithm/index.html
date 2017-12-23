@@ -102,7 +102,7 @@
 <meta property="og:site_name" content="唐漢〇〇〇">
 <meta property="og:description" content="FW算法与MVEEFW算法FW算法(Frank 1956)是一种特殊的一阶优化算法，在某些情况下也可以说是坐标下降算法，这个算法的主要思想是用一阶泰勒展示近似目标函数$f(x)$，来选择每一步迭代的下降方向。 考虑如下这个问题，其中$\mathcal{X}$是紧凸集，$f(x)$是凸的可微实值函数。FW算法可以求解这个优化问题：$$\begin{align}\text{min}  \quad &amp;a">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2017-12-23T15:27:47.638Z">
+<meta property="og:updated_time" content="2017-12-23T15:35:12.907Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="FW算法与MVEE">
 <meta name="twitter:description" content="FW算法与MVEEFW算法FW算法(Frank 1956)是一种特殊的一阶优化算法，在某些情况下也可以说是坐标下降算法，这个算法的主要思想是用一阶泰勒展示近似目标函数$f(x)$，来选择每一步迭代的下降方向。 考虑如下这个问题，其中$\mathcal{X}$是紧凸集，$f(x)$是凸的可微实值函数。FW算法可以求解这个优化问题：$$\begin{align}\text{min}  \quad &amp;a">
@@ -427,6 +427,7 @@
       
         <h1 id="FW算法与MVEE"><a href="#FW算法与MVEE" class="headerlink" title="FW算法与MVEE"></a>FW算法与MVEE</h1><h2 id="FW算法"><a href="#FW算法" class="headerlink" title="FW算法"></a>FW算法</h2><p>FW算法<a href="#1">(Frank 1956)</a>是一种特殊的一阶优化算法，在某些情况下也可以说是坐标下降算法，这个算法的主要思想是用一阶泰勒展示近似目标函数$f(x)$，来选择每一步迭代的下降方向。</p>
 <p>考虑如下这个问题，其中$\mathcal{X}$是紧凸集，$f(x)$是凸的可微实值函数。FW算法可以求解这个优化问题：<br>$$<br>\begin{align}\text{min}  \quad &amp; f(x)\tag{1} \\<br>\text{s.t.} \quad  &amp;x\in \mathcal{X}\nonumber \end{align}<br>$$</p>
+<a id="more"></a>
 <h3 id="算法"><a href="#算法" class="headerlink" title="算法"></a>算法</h3><blockquote>
 <p>给定初值$x_k$</p>
 <p>步骤1. 下降方向选择问题(通过求解这个子优化问题得到下降方向$s_k$)<br>          $$<br>\begin{align}\text{min}  \quad &amp; s^{T}\nabla f(x_k)\tag{2}  \\<br> \text{s.t.} \quad  &amp;s\in \mathcal{X}\nonumber \end{align}<br>$$</p>
