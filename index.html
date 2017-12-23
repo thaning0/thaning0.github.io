@@ -327,6 +327,165 @@
   
   
   <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://thaning0.github.io/2017/12/23/FW Algorithm/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="唐漢〇〇〇">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/p1323035781.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="唐漢〇〇〇">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2017/12/23/FW Algorithm/" itemprop="url">FW算法与MVEE</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-12-23T23:08:00+08:00">
+                2017-12-23
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Optimization/" itemprop="url" rel="index">
+                    <span itemprop="name">Optimization</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body han-init-context" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h1 id="FW算法与MVEE"><a href="#FW算法与MVEE" class="headerlink" title="FW算法与MVEE"></a>FW算法与MVEE</h1><h2 id="FW算法"><a href="#FW算法" class="headerlink" title="FW算法"></a>FW算法</h2><p>FW算法<a href="#1">(Frank 1956)</a>是一种特殊的一阶优化算法，在某些情况下也可以说是坐标下降算法，这个算法的主要思想是用一阶泰勒展示近似目标函数$f(x)$，来选择每一步迭代的下降方向。</p>
+<p>考虑如下这个问题，其中$\mathcal{X}$是紧凸集，$f(x)$是凸的可微实值函数。FW算法可以求解这个优化问题：<br>$$<br>\begin{align}\text{min}  \quad &amp; f(x)\tag{1} \\<br>\text{s.t.} \quad  &amp;x\in \mathcal{X}\nonumber \end{align}<br>$$</p>
+<h3 id="算法"><a href="#算法" class="headerlink" title="算法"></a>算法</h3><blockquote>
+<p>给定初值$x_k$</p>
+<p>步骤1. 下降方向选择问题(通过求解这个子优化问题得到下降方向$s_k$)<br>          $$<br>\begin{align}\text{min}  \quad &amp; s^{T}\nabla f(x_k)\tag{2}  \\<br> \text{s.t.} \quad  &amp;s\in \mathcal{X}\nonumber \end{align}<br>$$</p>
+<p>步骤2. 步长选择(通过求解这个子问题得到最优下降步长,或者使用事先设定的步长)<br>          $$<br>\begin{align}\text{min}  \quad &amp; f(x_k+\gamma(s_k-x_k))  \tag{3}\\<br> \text{s.t.} \quad &amp; 0\le\gamma\le1 &amp; \nonumber\end{align}<br>$$</p>
+<p>步骤3. 更新<br>$$<br>\begin{align} x_{k+1}=x_k+\gamma(s_k-x_k)\tag{4} \end{align}<br>$$</p>
+<p>步骤4. 判断是否满足停止条件，若不满足回到步骤1</p>
+</blockquote>
+<h3 id="算法的解释"><a href="#算法的解释" class="headerlink" title="算法的解释"></a>算法的解释</h3><p>$f(x)$在$x_k$的一阶泰勒展式为$$\begin{align}f(x)=f(x_k)+(x-x_k)^T\nabla f(x_k)+O(x-x_k)\tag{5}\end{align}$$用$(5)$等号右边前两项近似$f(x)$，因为$x_k$是给定常数，可以得到优化问题$(2)$，FW算法的思想即为用近似问题的最优解的方向$s_k-x_k$作为原问题的下降方向。</p>
+<p>将$(4)$改写为</p>
+<p>$$<br>x_{k+1}=(1-\gamma)x_k+\gamma s_k \tag{6}<br>$$</p>
+<p>因为$0\le\gamma\le1$所以$x_{k+1}$是$x_k$与$s_k$的凸组合。这样更新步在一些特定问题中与梯度下降算法与坐标下降算法相比具有优势。</p>
+<h2 id="MVEE-Minimun-Volumn-Enclosing-Ellipsoids-与FW算法"><a href="#MVEE-Minimun-Volumn-Enclosing-Ellipsoids-与FW算法" class="headerlink" title="MVEE(Minimun Volumn Enclosing Ellipsoids)与FW算法"></a>MVEE(Minimun Volumn Enclosing Ellipsoids)与FW算法</h2><p>根据MVEE问题的最优性条件，只需要求解对偶问题就可以得到原问题的最优解，对偶问题如下：</p>
+<p>$$<br>\begin{align}<br>&amp;\text{max}_{u \in \mathcal{R}^m} \quad &amp; g(u)&amp; \triangleq \text{lndet}(XUX^T) \tag{7} \\<br>&amp;\text{s.t.} \quad &amp;\mathbf{1}^Tu&amp;=1 \nonumber \\<br>&amp;&amp;u&amp;\ge0<br>\end{align}<br>$$</p>
+<p>对于问题$(7)$可以用FW算法求解。</p>
+<p>因为约束的单位单纯形，所以对应的问题$(2)$的解一定在单纯形的顶点上，也就是$ s_k=e_i $，$i$为$ g(u) $在$u_k$的梯度中最小的一个元素的下标。更新得到的$u_k$一定还在单位单纯形上。而梯度下降算法与坐标下降算法是不能保证每一步更新得到的$u_k$仍在单纯形上。</p>
+<p><span id="1"></span><br>[1] Frank, M.; Wolfe, P. (1956). “An algorithm for quadratic programming”. Naval Research Logistics Quarterly. 3: 95. doi:10.1002/nav.3800030109.</p>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="https://thaning0.github.io/2017/12/23/submitmyblog/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -1012,7 +1171,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">4</span>
+                  <span class="site-state-item-count">5</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
@@ -1023,7 +1182,7 @@
               
               <div class="site-state-item site-state-categories">
                 <a href="/categories/index.html">
-                  <span class="site-state-item-count">1</span>
+                  <span class="site-state-item-count">2</span>
                   <span class="site-state-item-name">分类</span>
                 </a>
               </div>
@@ -1034,7 +1193,7 @@
               
               <div class="site-state-item site-state-tags">
                 <a href="/tags/index.html">
-                  <span class="site-state-item-count">4</span>
+                  <span class="site-state-item-count">6</span>
                   <span class="site-state-item-name">标签</span>
                 </a>
               </div>
