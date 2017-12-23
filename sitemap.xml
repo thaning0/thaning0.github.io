@@ -2,6 +2,27 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://thaning0.github.io/categories/index.html</loc>
+    
+    <lastmod>2017-12-23T11:09:20.536Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://thaning0.github.io/about/index.html</loc>
+    
+    <lastmod>2017-12-23T11:09:08.601Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://thaning0.github.io/tags/index.html</loc>
+    
+    <lastmod>2017-12-23T11:08:30.890Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://thaning0.github.io/2017/12/21/markdown/</loc>
     
     <lastmod>2017-12-23T10:11:52.963Z</lastmod>
@@ -26,27 +47,6 @@
     <loc>https://thaning0.github.io/2017/12/23/search/</loc>
     
     <lastmod>2017-12-23T06:40:57.757Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://thaning0.github.io/about/index.html</loc>
-    
-    <lastmod>2017-12-22T18:06:13.873Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://thaning0.github.io/categories/index.html</loc>
-    
-    <lastmod>2017-12-22T17:25:07.412Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://thaning0.github.io/tags/index.html</loc>
-    
-    <lastmod>2017-12-22T17:24:44.492Z</lastmod>
     
   </url>
   
