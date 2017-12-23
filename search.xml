@@ -3,7 +3,7 @@
   <entry>
     <title><![CDATA[开启next的站内搜索功能]]></title>
     <url>%2F2017%2F12%2F23%2Fsearch%2F</url>
-    <content type="text"><![CDATA[开启next自带的站内搜索功能1. 安装hexo-generator-searchdbnpm install hexo-generator-searchdb --save 2. 打开hexo目录下的_config.yml,添加以下内容:12345search:path: search.xmlfield: postformat: htmllimit: 10000 3. 打开next目录下的_config.yml,将:12local_search:enable: false 改为 12local_search:enable: true 参考github文档]]></content>
+    <content type="text"><![CDATA[开启next自带的站内搜索功能(在hexo目录下安装)1. 安装hexo-generator-searchdbnpm install hexo-generator-searchdb --save 2. 打开hexo目录下的_config.yml,添加以下内容:12345search:path: search.xmlfield: postformat: htmllimit: 10000 3. 打开next目录下的_config.yml,将:12local_search:enable: false 改为 12local_search:enable: true 参考github文档]]></content>
       <categories>
         <category>Tutorial</category>
       </categories>
@@ -26,7 +26,7 @@
   <entry>
     <title><![CDATA[Markdown]]></title>
     <url>%2F2017%2F12%2F21%2Fmarkdown%2F</url>
-    <content type="text"><![CDATA[标题引用/参考 Markdown 是一种轻量级标记语言，它允许人们使用易读易写的纯文本格式编写文档，然后转换成格式丰富的HTML页面。 —— 维基百科 正如您在阅读的这份文档，它使用简单的符号标识不同的标题，将某些文字标记为粗体或者斜体，创建一个链接或MultiMarkdown文档或着脚注^1。 链接http://www.baidu.com&#97;&#x62;&#x63;&#64;&#97;&#98;&#x63;&#x2e;&#x63;&#111;&#109; 列表使用*，+，-表示无序列表 1 2 3 使用数字加.表示有序列表 a b c 定义型列表冒号+TAB A: A B: B 锚点跳转12[点击](#ID)&lt;span id = &quot;ID&quot;&gt;&lt;/span&gt;#跳转到这里 代码代码块12345678910@requires_authorizationdef somefunc(param1='', param2=0): '''A docstring''' if param1 &gt; param2: # interesting print 'Greater' return (param2 - param1 + 1) or Noneclass SomeClass: pass&gt;&gt;&gt; message = '''interpreter... prompt''' #include &lt;stdio.h&gt; int main(void) { printf(&quot;Hello world\n&quot;); } 行内式代码这个函数code()怎么使用 LaTeX 公式（MathJax语法）可以创建行内公式，例如 $ \Gamma(n) = (n-1)!\quad\forall n\in\mathbb N $。或者块级公式： $$ x = \dfrac{-b \pm \sqrt{b^2 - 4ac}}{2a} $$ 表格 Item Value Qty Computer 1600 USD 5 Phone 12 USD 12 Pipe 1 USD 234 分割线 用Sublime编辑Markdown文件插件 Markdown Extended Markdown HTML Preview OmniMarkup Previewer （在浏览器中预览） MarkdownFootnotes （脚注） MarkdownHighlighting （高亮） MarkdownTOC （生存目录）]]></content>
+    <content type="text"><![CDATA[标题引用/参考 Markdown 是一种轻量级标记语言，它允许人们使用易读易写的纯文本格式编写文档，然后转换成格式丰富的HTML页面。 —— 维基百科 正如您在阅读的这份文档，它使用简单的符号标识不同的标题，将某些文字标记为粗体或者斜体，创建一个链接或MultiMarkdown文档或着脚注^1。 链接http://www.baidu.com&#97;&#98;&#99;&#x40;&#x61;&#98;&#x63;&#46;&#99;&#x6f;&#x6d; 列表使用*，+，-表示无序列表 1 2 3 使用数字加.表示有序列表 a b c 定义型列表冒号+TAB A: A B: B 锚点跳转12[点击](#ID)&lt;span id = &quot;ID&quot;&gt;&lt;/span&gt;#跳转到这里 代码代码块12345678910@requires_authorizationdef somefunc(param1='', param2=0): '''A docstring''' if param1 &gt; param2: # interesting print 'Greater' return (param2 - param1 + 1) or Noneclass SomeClass: pass&gt;&gt;&gt; message = '''interpreter... prompt''' #include &lt;stdio.h&gt; int main(void) { printf(&quot;Hello world\n&quot;); } 行内式代码这个函数code()怎么使用 LaTeX 公式（MathJax语法）可以创建行内公式，例如 $ \Gamma(n) = (n-1)!\quad\forall n\in\mathbb N $。或者块级公式： $$ x = \dfrac{-b \pm \sqrt{b^2 - 4ac}}{2a} $$ 表格 Item Value Qty Computer 1600 USD 5 Phone 12 USD 12 Pipe 1 USD 234 分割线 用Sublime编辑Markdown文件插件 Markdown Extended Markdown HTML Preview OmniMarkup Previewer （在浏览器中预览） MarkdownFootnotes （脚注） MarkdownHighlighting （高亮） MarkdownTOC （生存目录）]]></content>
       <categories>
         <category>Tutorial</category>
       </categories>

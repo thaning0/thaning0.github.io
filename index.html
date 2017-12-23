@@ -399,7 +399,7 @@
       
         
           
-            <h1 id="开启next自带的站内搜索功能"><a href="#开启next自带的站内搜索功能" class="headerlink" title="开启next自带的站内搜索功能"></a>开启next自带的站内搜索功能</h1><h3 id="1-安装hexo-generator-searchdb"><a href="#1-安装hexo-generator-searchdb" class="headerlink" title="1. 安装hexo-generator-searchdb"></a>1. 安装hexo-generator-searchdb</h3><p><code>npm install hexo-generator-searchdb --save</code></p>
+            <h1 id="开启next自带的站内搜索功能-在hexo目录下安装"><a href="#开启next自带的站内搜索功能-在hexo目录下安装" class="headerlink" title="开启next自带的站内搜索功能(在hexo目录下安装)"></a>开启next自带的站内搜索功能(在hexo目录下安装)</h1><h3 id="1-安装hexo-generator-searchdb"><a href="#1-安装hexo-generator-searchdb" class="headerlink" title="1. 安装hexo-generator-searchdb"></a>1. 安装hexo-generator-searchdb</h3><p><code>npm install hexo-generator-searchdb --save</code></p>
 <h3 id="2-打开hexo目录下的-config-yml-添加以下内容"><a href="#2-打开hexo目录下的-config-yml-添加以下内容" class="headerlink" title="2. 打开hexo目录下的_config.yml,添加以下内容:"></a>2. 打开hexo目录下的_config.yml,添加以下内容:</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">search:</span><br><span class="line">path: search.xml</span><br><span class="line">field: post</span><br><span class="line">format: html</span><br><span class="line">limit: 10000</span><br></pre></td></tr></table></figure>
 <h3 id="3-打开next目录下的-config-yml-将"><a href="#3-打开next目录下的-config-yml-将" class="headerlink" title="3. 打开next目录下的_config.yml,将:"></a>3. 打开next目录下的_config.yml,将:</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">local_search:</span><br><span class="line">enable: false</span><br></pre></td></tr></table></figure>
 <p>改为</p>
@@ -1426,6 +1426,21 @@
   
 
   
+<script>
+(function(){
+    var bp = document.createElement('script');
+    var curProtocol = window.location.protocol.split(':')[0];
+    if (curProtocol === 'https') {
+        bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';        
+    }
+    else {
+        bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+    }
+    var s = document.getElementsByTagName("script")[0];
+    s.parentNode.insertBefore(bp, s);
+})();
+</script>
+
 
   
   
