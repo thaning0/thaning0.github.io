@@ -83,7 +83,7 @@
 
 
 
-  <meta name="keywords" content="battle,life" />
+  <meta name="keywords" content="MVEE,optimization," />
 
 
 
@@ -94,13 +94,21 @@
 
 
 
-<meta property="og:type" content="website">
-<meta property="og:title" content="唐漢〇〇〇">
-<meta property="og:url" content="https://thaning0.github.io/tags/hexo/index.html">
+<meta name="description" content="MVEE(Minimun Volumn Enclosing Ellipsoids)根据MVEE问题的最优性条件，只需要求解对偶问题就可以得到原问题的最优解，对偶问题如下： $$\begin{align}&amp;amp;\text{max}_ {u \in \mathcal{R}^m} \quad &amp;amp; g(u)&amp;amp; \triangleq \text{lndet}(XUX^T) \tag{1}">
+<meta name="keywords" content="MVEE,optimization">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Algorithms for the MVEE problem">
+<meta property="og:url" content="https://thaning0.github.io/2017/12/23/MVEEAlgorithm/index.html">
 <meta property="og:site_name" content="唐漢〇〇〇">
+<meta property="og:description" content="MVEE(Minimun Volumn Enclosing Ellipsoids)根据MVEE问题的最优性条件，只需要求解对偶问题就可以得到原问题的最优解，对偶问题如下： $$\begin{align}&amp;amp;\text{max}_ {u \in \mathcal{R}^m} \quad &amp;amp; g(u)&amp;amp; \triangleq \text{lndet}(XUX^T) \tag{1}">
 <meta property="og:locale" content="zh-Hans">
+<meta property="og:image" content="https://thaning0.github.io/2017/12/23/MVEEAlgorithm/%22https://s1.ax2x.com/2017/12/24/VlzrY.gif%22">
+<meta property="og:image" content="https://thaning0.github.io/2017/12/23/MVEEAlgorithm/%22https://s1.ax2x.com/2017/12/24/VlmWr.gif%22">
+<meta property="og:updated_time" content="2017-12-24T15:56:29.240Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="唐漢〇〇〇">
+<meta name="twitter:title" content="Algorithms for the MVEE problem">
+<meta name="twitter:description" content="MVEE(Minimun Volumn Enclosing Ellipsoids)根据MVEE问题的最优性条件，只需要求解对偶问题就可以得到原问题的最优解，对偶问题如下： $$\begin{align}&amp;amp;\text{max}_ {u \in \mathcal{R}^m} \quad &amp;amp; g(u)&amp;amp; \triangleq \text{lndet}(XUX^T) \tag{1}">
+<meta name="twitter:image" content="https://thaning0.github.io/2017/12/23/MVEEAlgorithm/%22https://s1.ax2x.com/2017/12/24/VlzrY.gif%22">
 
 
 
@@ -130,13 +138,13 @@
 
 
 
-  <link rel="canonical" href="https://thaning0.github.io/tags/hexo/"/>
+  <link rel="canonical" href="https://thaning0.github.io/2017/12/23/MVEEAlgorithm/"/>
 
 
 
 
 
-  <title>标签: hexo | 唐漢〇〇〇</title>
+  <title>Algorithms for the MVEE problem | 唐漢〇〇〇</title>
   
 
 
@@ -174,7 +182,7 @@
     
   
 
-  <div class="container sidebar-position-left ">
+  <div class="container sidebar-position-left page-post-detail">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
@@ -312,82 +320,217 @@
           <div id="content" class="content">
             
 
-  
-  
-  
-  <div class="post-block tag">
+  <div id="posts" class="posts-expand">
+    
 
-    <div id="posts" class="posts-collapse">
-      <div class="collection-title">
-        <h1>hexo<small>标签</small>
-        </h1>
-      </div>
+  
 
-      
-        
+  
+  
+  
 
   <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://thaning0.github.io/2017/12/23/MVEEAlgorithm/">
 
-      <h2 class="post-title">
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="唐漢〇〇〇">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/p1323035781.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="唐漢〇〇〇">
+    </span>
+
+    
+      <header class="post-header">
+
         
-            <a class="post-title-link" href="/2017/12/23/submitmyblog/" itemprop="url">
-              
-                <span itemprop="name">Submit Blog</span>
-              
-            </a>
         
-      </h2>
+          <h1 class="post-title" itemprop="name headline">Algorithms for the MVEE problem</h1>
+        
 
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2017-12-23T15:48:11+08:00"
-              content="2017-12-23" >
-          12-23
-        </time>
-      </div>
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-12-23T23:08:00+08:00">
+                2017-12-23
+              </time>
+            
 
-    </header>
-  </article>
+            
 
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Algorithms/" itemprop="url" rel="index">
+                    <span itemprop="name">Algorithms</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+            <span class="post-meta-divider">|</span>
+            <span class="page-pv"><i class="fa fa-file-o"></i>
+            <span class="busuanzi-value" id="busuanzi_value_page_pv" ></span>
+            </span>
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body han-init-context" itemprop="articleBody">
 
       
-        
+      
 
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h2 class="post-title">
-        
-            <a class="post-title-link" href="/2017/12/23/search/" itemprop="url">
-              
-                <span itemprop="name">开启next的站内搜索功能</span>
-              
-            </a>
-        
-      </h2>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2017-12-23T00:00:00+08:00"
-              content="2017-12-23" >
-          12-23
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
+      
+        <h2 id="MVEE-Minimun-Volumn-Enclosing-Ellipsoids"><a href="#MVEE-Minimun-Volumn-Enclosing-Ellipsoids" class="headerlink" title="MVEE(Minimun Volumn Enclosing Ellipsoids)"></a>MVEE(Minimun Volumn Enclosing Ellipsoids)</h2><p>根据MVEE问题的最优性条件，只需要求解对偶问题就可以得到原问题的最优解，对偶问题如下：</p>
+<p>$$<br>\begin{align}<br>&amp;\text{max}_ {u \in \mathcal{R}^m} \quad &amp; g(u)&amp; \triangleq \text{lndet}(XUX^T) \tag{1} \\<br>&amp;\text{s.t.} \quad &amp;\mathbf{1}^Tu&amp;=1 \nonumber \\<br>&amp;&amp;u&amp;\ge0<br>\end{align}<br>$$</p>
+<p>对于问题$(1)$可以用FW算法和WA算法求解。</p>
+<a id="more"></a>
+<h2 id="FW算法"><a href="#FW算法" class="headerlink" title="FW算法"></a>FW算法</h2><p>FW算法<a href="#1">(Frank 1956)</a>是一种特殊的一阶优化算法，在某些情况下也可以说是坐标下降算法，这个算法的主要思想是用一阶泰勒展示近似目标函数$f(x)$，来选择每一步迭代的下降方向。</p>
+<p>考虑如下这个问题，其中$\mathcal{X}$是紧凸集，$f(x)$是凸的可微实值函数。FW算法可以求解这个优化问题：<br>$$<br>\begin{align}\text{min}  \quad &amp; f(x)\tag{2} \\<br>\text{s.t.} \quad  &amp;x\in \mathcal{X}\nonumber \end{align}<br>$$</p>
+<h3 id="算法"><a href="#算法" class="headerlink" title="算法"></a>算法</h3><blockquote>
+<p>FW algorithm</p>
+<p>给定初值$x_k$</p>
+<p>步骤1. 下降方向选择问题(通过求解这个子优化问题得到下降方向$s_k$)<br>          $$<br>\begin{align}\text{min}  \quad &amp; s^{T}\nabla f(x_k)\tag{3}  \\<br> \text{s.t.} \quad  &amp;s\in \mathcal{X}\nonumber \end{align}<br>$$</p>
+<p>步骤2. 步长选择(通过求解这个子问题得到最优下降步长,或者使用事先设定的步长)<br>          $$<br>\begin{align}\text{min}  \quad &amp; f(x_k+\gamma(s_k-x_k))  \tag{4}\\<br> \text{s.t.} \quad &amp; 0\le\gamma\le1 &amp; \nonumber\end{align}<br>$$</p>
+<p>步骤3. 更新<br>$$<br>\begin{align} x_{k+1}=x_k+\gamma(s_k-x_k)\tag{5} \end{align}<br>$$</p>
+<p>步骤4. 判断是否满足停止条件，若不满足回到步骤1</p>
+</blockquote>
+<h3 id="算法的解释"><a href="#算法的解释" class="headerlink" title="算法的解释"></a>算法的解释</h3><p>$f(x)$在$x_k$的一阶泰勒展式为$$\begin{align}f(x)=f(x_k)+(x-x_k)^T\nabla f(x_k)+O(x-x_k)\tag{6}\end{align}$$用$(6)$等号右边前两项近似$f(x)$，因为$x_k$是给定常数，可以得到优化问题$(3)$，FW算法的思想即为用近似问题的最优解的方向$s_k-x_k$作为原问题的下降方向。</p>
+<p>将$(4)$改写为</p>
+<p>$$<br>x_{k+1}=(1-\gamma)x_k+\gamma s_k \tag{7}<br>$$</p>
+<p>因为$0\le\gamma\le1$所以$x_{k+1}$是$x_k$与$s_k$的凸组合。这样更新步在一些特定问题中与梯度下降算法与坐标下降算法相比具有优势。</p>
+<h3 id="求MVEE的近似解的FW算法-Todd-2016"><a href="#求MVEE的近似解的FW算法-Todd-2016" class="headerlink" title="求MVEE的近似解的FW算法(Todd 2016)"></a>求MVEE的近似解的FW算法<a href="#2">(Todd 2016)</a></h3><p>因为$(1)$的约束是单位单纯形，所以FW算法中$(3)$的解一定在单纯形的顶点上，也就是$ s_k=e_i $，$i$为$ g(u) $在$u_k$的梯度中最小的一个元素的下标。更新得到的$u_k$一定还在单位单纯形上。而梯度下降算法与坐标下降算法是不能保证每一步更新得到的$u_k$仍在单纯形上。</p>
+<blockquote>
+<p>FW algorithm<br>给定初值$u$满足$(7)$的约束与$\epsilon\gt0$，计算$g(u)$的梯度和$XUX^T$的Cholesky分解<br>$$<br>w\triangleq\nabla g(u)<br>$$<br>步骤1. 计算<br>$$<br>\epsilon_+=\max_h\frac{(w_h-n)}{n}<br>$$<br>记$h=i$取得最大值，如果$\epsilon_+ \lt\epsilon$，停止：得到近似解u</p>
+<p>步骤2. 计算<br>$$<br>\lambda \triangleq\frac{w_i-n}{(n-1)w_i}<br>$$<br>更新 $ u \leftarrow   (1+\lambda )^{-1} (u+\lambda e_i)$</p>
+<p>步骤3. 更新$w$与$XUX^T$的Cholesky分解，回到步骤1</p>
+</blockquote>
+<h2 id="WA算法"><a href="#WA算法" class="headerlink" title="WA算法"></a>WA算法</h2><p>回到下降方向的选择问题，在FW算法中下降方向指向线性近似问题的最优解。从另一个角度来考虑，下降方向也可以指向线性近似问题的最差解的负方向(如果这个解存在的话)，也就是远离最差的解。WA算法(Atwood)综合考虑了这两种思想来选择下降方向。</p>
+<blockquote>
+<p>WA algorithm<br>给定初值$u$满足$(7)$的约束与$\epsilon\gt0$，计算$g(u)$的梯度和$XUX^T$的Cholesky分解<br>$$<br>w\triangleq\nabla g(u)<br>$$<br>步骤1. 计算<br>$$<br>\epsilon_+=\max_h\frac{(w_h-n)}{n}, \,\epsilon_-=\max_h \left\{ \frac{(n-w_h)}{n} : u_h \gt 0 \right\}<br>$$<br>记$h=i$使得$\epsilon_+$取得最大值，$h=j$使得$\epsilon_-$取得最大值。如果$\max \{\epsilon_+,\epsilon_- \} \lt\epsilon$，停止：得到近似解u；否则，如果$\epsilon_+\gt \epsilon_-$，前往步骤2；如果$\epsilon_+\lt \epsilon_-$，前往步骤3。</p>
+<p>步骤2. 计算<br>$$<br>\lambda \triangleq\frac{w_i-n}{(n-1)w_i}<br>$$<br>更新 $ u \leftarrow   (1+\lambda )^{-1} (u+\lambda e_i)$，前往步骤4。</p>
+<p>步骤3.计算<br>$$<br>\lambda \triangleq\frac{w_j-n}{(n-1)w_j}<br>$$<br>令$\lambda=\max\{-u_j,\lambda\}$，更新 $ u \leftarrow   (1+\lambda )^{-1} (u+\lambda e_j)$，前往步骤4。</p>
+<p>步骤4. 更新$w$与$XUX^T$的Cholesky分解，回到步骤1</p>
+</blockquote>
+<h2 id="一个简单的例子"><a href="#一个简单的例子" class="headerlink" title="一个简单的例子"></a>一个简单的例子</h2><p>$$<br>X=<br>\begin{bmatrix}<br>&amp;-1&amp;-1&amp;1&amp;2&amp; \\<br>&amp;1&amp;-1&amp;-1&amp;2&amp;<br>\end{bmatrix}<br>$$</p>
+<p>如果考虑KY初始化方法,得到出初值$u=(1/2;0;0;1/2) \text{or} (0;0;1/2;1/2)$ 这两个都是最优解，FW算法与WA算法都立刻终止了。</p>
+<p>如果考虑K初始化方法$u=(1/4;1/4;1/4;1/4)$。</p>
+<p>FW算法效果如下图，收敛速度慢，100次迭代后仍未停止：</p>
+<p><img src="&quot;https://s1.ax2x.com/2017/12/24/VlzrY.gif&quot;" alt="1"></p>
+<p>WA算法效果如下图，三次迭代后终止，并得到最优解：</p>
+<p><img src="&quot;https://s1.ax2x.com/2017/12/24/VlmWr.gif&quot;" alt="2"></p>
+<font size="2"><br><span id="1">[1] Frank, Marguerite, and Philip Wolfe. “An algorithm for quadratic programming.” Naval Research Logistics (NRL) 3.1‐2 (1956): 95-110.</span><br><span id="2">[2] Todd, M.J. Minimum volume ellipsoids: theory and algorithms. New York: Society for Industrial and Applied Mathematics, 2016.  26-29.</span><br></font>
       
     </div>
+    
+    
+    
 
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/MVEE/" rel="tag"># MVEE</a>
+          
+            <a href="/tags/optimization/" rel="tag"># optimization</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2017/12/23/submitmyblog/" rel="next" title="Submit Blog">
+                <i class="fa fa-chevron-left"></i> Submit Blog
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2017/12/24/memorandum/" rel="prev" title="Proof of MVE lemma 3.7.(ii)">
+                Proof of MVE lemma 3.7.(ii) <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
   </div>
   
   
   
+  </article>
 
-  
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
 
 
           </div>
@@ -395,6 +538,15 @@
 
 
           
+
+  
+    <div class="comments" id="comments">
+      <div id="lv-container" data-id="city" data-uid="MTAyMC8zMjYzOC85MTk5"></div>
+    </div>
+
+  
+
+
 
         </div>
         
@@ -417,8 +569,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <section class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -498,6 +659,22 @@
         </div>
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#MVEE-Minimun-Volumn-Enclosing-Ellipsoids"><span class="nav-text">MVEE(Minimun Volumn Enclosing Ellipsoids)</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#FW算法"><span class="nav-text">FW算法</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#算法"><span class="nav-text">算法</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#算法的解释"><span class="nav-text">算法的解释</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#求MVEE的近似解的FW算法-Todd-2016"><span class="nav-text">求MVEE的近似解的FW算法(Todd 2016)</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#WA算法"><span class="nav-text">WA算法</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#一个简单的例子"><span class="nav-text">一个简单的例子</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       
@@ -659,6 +836,10 @@
   
 
   
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.3"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.3"></script>
+
+
 
   
 
@@ -687,6 +868,17 @@
 
 
 
+  
+    <script type="text/javascript">
+      (function(d, s) {
+        var j, e = d.getElementsByTagName(s)[0];
+        if (typeof LivereTower === 'function') { return; }
+        j = d.createElement(s);
+        j.src = 'https://cdn-city.livere.com/js/embed.dist.js';
+        j.async = true;
+        e.parentNode.insertBefore(j, e);
+      })(document, 'script');
+    </script>
   
 
 
