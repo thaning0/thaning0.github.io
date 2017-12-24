@@ -102,13 +102,14 @@
 <meta property="og:site_name" content="唐漢〇〇〇">
 <meta property="og:description" content="MVEE(Minimun Volumn Enclosing Ellipsoids)根据MVEE问题的最优性条件，只需要求解对偶问题就可以得到原问题的最优解，对偶问题如下： $$\begin{align}&amp;amp;\text{max}_ {u \in \mathcal{R}^m} \quad &amp;amp; g(u)&amp;amp; \triangleq \text{lndet}(XUX^T) \tag{1}">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:image" content="https://thaning0.github.io/2017/12/23/MVEEAlgorithm/%22https://s1.ax2x.com/2017/12/24/VlzrY.gif%22">
-<meta property="og:image" content="https://thaning0.github.io/2017/12/23/MVEEAlgorithm/%22https://s1.ax2x.com/2017/12/24/VlmWr.gif%22">
-<meta property="og:updated_time" content="2017-12-24T15:56:29.240Z">
+<meta property="og:image" content="https://thaning0.github.io/images/KYinit.jpg">
+<meta property="og:image" content="https://thaning0.github.io/images/FW_example.gif">
+<meta property="og:image" content="https://thaning0.github.io/images/WA_example.gif">
+<meta property="og:updated_time" content="2017-12-24T16:07:29.559Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Algorithms for the MVEE problem">
 <meta name="twitter:description" content="MVEE(Minimun Volumn Enclosing Ellipsoids)根据MVEE问题的最优性条件，只需要求解对偶问题就可以得到原问题的最优解，对偶问题如下： $$\begin{align}&amp;amp;\text{max}_ {u \in \mathcal{R}^m} \quad &amp;amp; g(u)&amp;amp; \triangleq \text{lndet}(XUX^T) \tag{1}">
-<meta name="twitter:image" content="https://thaning0.github.io/2017/12/23/MVEEAlgorithm/%22https://s1.ax2x.com/2017/12/24/VlzrY.gif%22">
+<meta name="twitter:image" content="https://thaning0.github.io/images/KYinit.jpg">
 
 
 
@@ -460,12 +461,12 @@
 <p>步骤4. 更新$w$与$XUX^T$的Cholesky分解，回到步骤1</p>
 </blockquote>
 <h2 id="一个简单的例子"><a href="#一个简单的例子" class="headerlink" title="一个简单的例子"></a>一个简单的例子</h2><p>$$<br>X=<br>\begin{bmatrix}<br>&amp;-1&amp;-1&amp;1&amp;2&amp; \\<br>&amp;1&amp;-1&amp;-1&amp;2&amp;<br>\end{bmatrix}<br>$$</p>
-<p>如果考虑KY初始化方法,得到出初值$u=(1/2;0;0;1/2) \text{or} (0;0;1/2;1/2)$ 这两个都是最优解，FW算法与WA算法都立刻终止了。</p>
+<p>如果考虑KY初始化方法,得到出初值$u=(1/2;0;0;1/2) \text{or} (0;0;1/2;1/2)$ 这两个都是最优解，FW算法与WA算法都立刻终止了。<br><img src="/images/KYinit.jpg" alt="KY"></p>
 <p>如果考虑K初始化方法$u=(1/4;1/4;1/4;1/4)$。</p>
 <p>FW算法效果如下图，收敛速度慢，100次迭代后仍未停止：</p>
-<p><img src="&quot;https://s1.ax2x.com/2017/12/24/VlzrY.gif&quot;" alt="1"></p>
+<p><img src="/images/FW_example.gif" alt="FW"></p>
 <p>WA算法效果如下图，三次迭代后终止，并得到最优解：</p>
-<p><img src="&quot;https://s1.ax2x.com/2017/12/24/VlmWr.gif&quot;" alt="2"></p>
+<p><img src="/images/WA_example.gif" alt="WA"></p>
 <font size="2"><br><span id="1">[1] Frank, Marguerite, and Philip Wolfe. “An algorithm for quadratic programming.” Naval Research Logistics (NRL) 3.1‐2 (1956): 95-110.</span><br><span id="2">[2] Todd, M.J. Minimum volume ellipsoids: theory and algorithms. New York: Society for Industrial and Applied Mathematics, 2016.  26-29.</span><br></font>
       
     </div>
@@ -508,8 +509,8 @@
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2017/12/24/memorandum/" rel="prev" title="Proof of MVE lemma 3.7.(ii)">
-                Proof of MVE lemma 3.7.(ii) <i class="fa fa-chevron-right"></i>
+              <a href="/2017/12/24/memorandum/" rel="prev" title="Proof of MVEE lemma 3.7.(ii)">
+                Proof of MVEE lemma 3.7.(ii) <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
