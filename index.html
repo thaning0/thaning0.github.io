@@ -346,7 +346,7 @@
         
           <h1 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/2017/12/23/FW Algorithm/" itemprop="url">FW算法与MVEE</a></h1>
+                <a class="post-title-link" href="/2017/12/23/FW Algorithm/" itemprop="url">Algorithms for the MVEE problem</a></h1>
         
 
         <div class="post-meta">
@@ -381,8 +381,8 @@
               
               
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/Optimization/" itemprop="url" rel="index">
-                    <span itemprop="name">Optimization</span>
+                  <a href="/categories/Algorithms/" itemprop="url" rel="index">
+                    <span itemprop="name">Algorithms</span>
                   </a>
                 </span>
 
@@ -419,8 +419,9 @@
 
       
         
-          <h1 id="FW算法与MVEE"><a href="#FW算法与MVEE" class="headerlink" title="FW算法与MVEE"></a>FW算法与MVEE</h1><h2 id="FW算法"><a href="#FW算法" class="headerlink" title="FW算法"></a>FW算法</h2><p>FW算法<a href="#1">(Frank 1956)</a>是一种特殊的一阶优化算法，在某些情况下也可以说是坐标下降算法，这个算法的主要思想是用一阶泰勒展示近似目标函数$f(x)$，来选择每一步迭代的下降方向。</p>
-<p>考虑如下这个问题，其中$\mathcal{X}$是紧凸集，$f(x)$是凸的可微实值函数。FW算法可以求解这个优化问题：<br>$$<br>\begin{align}\text{min}  \quad &amp; f(x)\tag{1} \\<br>\text{s.t.} \quad  &amp;x\in \mathcal{X}\nonumber \end{align}<br>$$</p>
+          <h2 id="MVEE-Minimun-Volumn-Enclosing-Ellipsoids"><a href="#MVEE-Minimun-Volumn-Enclosing-Ellipsoids" class="headerlink" title="MVEE(Minimun Volumn Enclosing Ellipsoids)"></a>MVEE(Minimun Volumn Enclosing Ellipsoids)</h2><p>根据MVEE问题的最优性条件，只需要求解对偶问题就可以得到原问题的最优解，对偶问题如下：</p>
+<p>$$<br>\begin{align}<br>&amp;\text{max}_ {u \in \mathcal{R}^m} \quad &amp; g(u)&amp; \triangleq \text{lndet}(XUX^T) \tag{1} \\<br>&amp;\text{s.t.} \quad &amp;\mathbf{1}^Tu&amp;=1 \nonumber \\<br>&amp;&amp;u&amp;\ge0<br>\end{align}<br>$$</p>
+<p>对于问题$(1)$可以用FW算法和WA算法求解。</p>
           <!--noindex-->
           <div class="post-button text-center">
             <a class="btn" href="/2017/12/23/FW Algorithm/" rel="contents">
@@ -1170,7 +1171,7 @@
               
               <div class="site-state-item site-state-categories">
                 <a href="/categories/index.html">
-                  <span class="site-state-item-count">2</span>
+                  <span class="site-state-item-count">3</span>
                   <span class="site-state-item-name">分类</span>
                 </a>
               </div>
@@ -1181,7 +1182,7 @@
               
               <div class="site-state-item site-state-tags">
                 <a href="/tags/index.html">
-                  <span class="site-state-item-count">6</span>
+                  <span class="site-state-item-count">7</span>
                   <span class="site-state-item-name">标签</span>
                 </a>
               </div>

@@ -83,7 +83,7 @@
 
 
 
-  <meta name="keywords" content="MVEE,algorithm," />
+  <meta name="keywords" content="MVEE,optimization," />
 
 
 
@@ -94,18 +94,18 @@
 
 
 
-<meta name="description" content="FW算法与MVEEFW算法FW算法(Frank 1956)是一种特殊的一阶优化算法，在某些情况下也可以说是坐标下降算法，这个算法的主要思想是用一阶泰勒展示近似目标函数$f(x)$，来选择每一步迭代的下降方向。 考虑如下这个问题，其中$\mathcal{X}$是紧凸集，$f(x)$是凸的可微实值函数。FW算法可以求解这个优化问题：$$\begin{align}\text{min}  \quad &amp;a">
-<meta name="keywords" content="MVEE,algorithm">
+<meta name="description" content="MVEE(Minimun Volumn Enclosing Ellipsoids)根据MVEE问题的最优性条件，只需要求解对偶问题就可以得到原问题的最优解，对偶问题如下： $$\begin{align}&amp;amp;\text{max}_ {u \in \mathcal{R}^m} \quad &amp;amp; g(u)&amp;amp; \triangleq \text{lndet}(XUX^T) \tag{1}">
+<meta name="keywords" content="MVEE,optimization">
 <meta property="og:type" content="article">
-<meta property="og:title" content="FW算法与MVEE">
+<meta property="og:title" content="Algorithms for the MVEE problem">
 <meta property="og:url" content="https://thaning0.github.io/2017/12/23/FW Algorithm/index.html">
 <meta property="og:site_name" content="唐漢〇〇〇">
-<meta property="og:description" content="FW算法与MVEEFW算法FW算法(Frank 1956)是一种特殊的一阶优化算法，在某些情况下也可以说是坐标下降算法，这个算法的主要思想是用一阶泰勒展示近似目标函数$f(x)$，来选择每一步迭代的下降方向。 考虑如下这个问题，其中$\mathcal{X}$是紧凸集，$f(x)$是凸的可微实值函数。FW算法可以求解这个优化问题：$$\begin{align}\text{min}  \quad &amp;a">
+<meta property="og:description" content="MVEE(Minimun Volumn Enclosing Ellipsoids)根据MVEE问题的最优性条件，只需要求解对偶问题就可以得到原问题的最优解，对偶问题如下： $$\begin{align}&amp;amp;\text{max}_ {u \in \mathcal{R}^m} \quad &amp;amp; g(u)&amp;amp; \triangleq \text{lndet}(XUX^T) \tag{1}">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2017-12-23T15:35:12.907Z">
+<meta property="og:updated_time" content="2017-12-24T03:23:09.558Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="FW算法与MVEE">
-<meta name="twitter:description" content="FW算法与MVEEFW算法FW算法(Frank 1956)是一种特殊的一阶优化算法，在某些情况下也可以说是坐标下降算法，这个算法的主要思想是用一阶泰勒展示近似目标函数$f(x)$，来选择每一步迭代的下降方向。 考虑如下这个问题，其中$\mathcal{X}$是紧凸集，$f(x)$是凸的可微实值函数。FW算法可以求解这个优化问题：$$\begin{align}\text{min}  \quad &amp;a">
+<meta name="twitter:title" content="Algorithms for the MVEE problem">
+<meta name="twitter:description" content="MVEE(Minimun Volumn Enclosing Ellipsoids)根据MVEE问题的最优性条件，只需要求解对偶问题就可以得到原问题的最优解，对偶问题如下： $$\begin{align}&amp;amp;\text{max}_ {u \in \mathcal{R}^m} \quad &amp;amp; g(u)&amp;amp; \triangleq \text{lndet}(XUX^T) \tag{1}">
 
 
 
@@ -141,7 +141,7 @@
 
 
 
-  <title>FW算法与MVEE | 唐漢〇〇〇</title>
+  <title>Algorithms for the MVEE problem | 唐漢〇〇〇</title>
   
 
 
@@ -348,7 +348,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">FW算法与MVEE</h1>
+          <h1 class="post-title" itemprop="name headline">Algorithms for the MVEE problem</h1>
         
 
         <div class="post-meta">
@@ -383,8 +383,8 @@
               
               
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/Optimization/" itemprop="url" rel="index">
-                    <span itemprop="name">Optimization</span>
+                  <a href="/categories/Algorithms/" itemprop="url" rel="index">
+                    <span itemprop="name">Algorithms</span>
                   </a>
                 </span>
 
@@ -425,26 +425,38 @@
       
 
       
-        <h1 id="FW算法与MVEE"><a href="#FW算法与MVEE" class="headerlink" title="FW算法与MVEE"></a>FW算法与MVEE</h1><h2 id="FW算法"><a href="#FW算法" class="headerlink" title="FW算法"></a>FW算法</h2><p>FW算法<a href="#1">(Frank 1956)</a>是一种特殊的一阶优化算法，在某些情况下也可以说是坐标下降算法，这个算法的主要思想是用一阶泰勒展示近似目标函数$f(x)$，来选择每一步迭代的下降方向。</p>
-<p>考虑如下这个问题，其中$\mathcal{X}$是紧凸集，$f(x)$是凸的可微实值函数。FW算法可以求解这个优化问题：<br>$$<br>\begin{align}\text{min}  \quad &amp; f(x)\tag{1} \\<br>\text{s.t.} \quad  &amp;x\in \mathcal{X}\nonumber \end{align}<br>$$</p>
+        <h2 id="MVEE-Minimun-Volumn-Enclosing-Ellipsoids"><a href="#MVEE-Minimun-Volumn-Enclosing-Ellipsoids" class="headerlink" title="MVEE(Minimun Volumn Enclosing Ellipsoids)"></a>MVEE(Minimun Volumn Enclosing Ellipsoids)</h2><p>根据MVEE问题的最优性条件，只需要求解对偶问题就可以得到原问题的最优解，对偶问题如下：</p>
+<p>$$<br>\begin{align}<br>&amp;\text{max}_ {u \in \mathcal{R}^m} \quad &amp; g(u)&amp; \triangleq \text{lndet}(XUX^T) \tag{1} \\<br>&amp;\text{s.t.} \quad &amp;\mathbf{1}^Tu&amp;=1 \nonumber \\<br>&amp;&amp;u&amp;\ge0<br>\end{align}<br>$$</p>
+<p>对于问题$(1)$可以用FW算法和WA算法求解。</p>
 <a id="more"></a>
+<h2 id="FW算法"><a href="#FW算法" class="headerlink" title="FW算法"></a>FW算法</h2><p>FW算法<a href="#1">(Frank 1956)</a>是一种特殊的一阶优化算法，在某些情况下也可以说是坐标下降算法，这个算法的主要思想是用一阶泰勒展示近似目标函数$f(x)$，来选择每一步迭代的下降方向。</p>
+<p>考虑如下这个问题，其中$\mathcal{X}$是紧凸集，$f(x)$是凸的可微实值函数。FW算法可以求解这个优化问题：<br>$$<br>\begin{align}\text{min}  \quad &amp; f(x)\tag{2} \\<br>\text{s.t.} \quad  &amp;x\in \mathcal{X}\nonumber \end{align}<br>$$</p>
 <h3 id="算法"><a href="#算法" class="headerlink" title="算法"></a>算法</h3><blockquote>
+<p>FW algorithm</p>
 <p>给定初值$x_k$</p>
-<p>步骤1. 下降方向选择问题(通过求解这个子优化问题得到下降方向$s_k$)<br>          $$<br>\begin{align}\text{min}  \quad &amp; s^{T}\nabla f(x_k)\tag{2}  \\<br> \text{s.t.} \quad  &amp;s\in \mathcal{X}\nonumber \end{align}<br>$$</p>
-<p>步骤2. 步长选择(通过求解这个子问题得到最优下降步长,或者使用事先设定的步长)<br>          $$<br>\begin{align}\text{min}  \quad &amp; f(x_k+\gamma(s_k-x_k))  \tag{3}\\<br> \text{s.t.} \quad &amp; 0\le\gamma\le1 &amp; \nonumber\end{align}<br>$$</p>
-<p>步骤3. 更新<br>$$<br>\begin{align} x_{k+1}=x_k+\gamma(s_k-x_k)\tag{4} \end{align}<br>$$</p>
+<p>步骤1. 下降方向选择问题(通过求解这个子优化问题得到下降方向$s_k$)<br>          $$<br>\begin{align}\text{min}  \quad &amp; s^{T}\nabla f(x_k)\tag{3}  \\<br> \text{s.t.} \quad  &amp;s\in \mathcal{X}\nonumber \end{align}<br>$$</p>
+<p>步骤2. 步长选择(通过求解这个子问题得到最优下降步长,或者使用事先设定的步长)<br>          $$<br>\begin{align}\text{min}  \quad &amp; f(x_k+\gamma(s_k-x_k))  \tag{4}\\<br> \text{s.t.} \quad &amp; 0\le\gamma\le1 &amp; \nonumber\end{align}<br>$$</p>
+<p>步骤3. 更新<br>$$<br>\begin{align} x_{k+1}=x_k+\gamma(s_k-x_k)\tag{5} \end{align}<br>$$</p>
 <p>步骤4. 判断是否满足停止条件，若不满足回到步骤1</p>
 </blockquote>
-<h3 id="算法的解释"><a href="#算法的解释" class="headerlink" title="算法的解释"></a>算法的解释</h3><p>$f(x)$在$x_k$的一阶泰勒展式为$$\begin{align}f(x)=f(x_k)+(x-x_k)^T\nabla f(x_k)+O(x-x_k)\tag{5}\end{align}$$用$(5)$等号右边前两项近似$f(x)$，因为$x_k$是给定常数，可以得到优化问题$(2)$，FW算法的思想即为用近似问题的最优解的方向$s_k-x_k$作为原问题的下降方向。</p>
+<h3 id="算法的解释"><a href="#算法的解释" class="headerlink" title="算法的解释"></a>算法的解释</h3><p>$f(x)$在$x_k$的一阶泰勒展式为$$\begin{align}f(x)=f(x_k)+(x-x_k)^T\nabla f(x_k)+O(x-x_k)\tag{6}\end{align}$$用$(6)$等号右边前两项近似$f(x)$，因为$x_k$是给定常数，可以得到优化问题$(3)$，FW算法的思想即为用近似问题的最优解的方向$s_k-x_k$作为原问题的下降方向。</p>
 <p>将$(4)$改写为</p>
-<p>$$<br>x_{k+1}=(1-\gamma)x_k+\gamma s_k \tag{6}<br>$$</p>
+<p>$$<br>x_{k+1}=(1-\gamma)x_k+\gamma s_k \tag{7}<br>$$</p>
 <p>因为$0\le\gamma\le1$所以$x_{k+1}$是$x_k$与$s_k$的凸组合。这样更新步在一些特定问题中与梯度下降算法与坐标下降算法相比具有优势。</p>
-<h2 id="MVEE-Minimun-Volumn-Enclosing-Ellipsoids-与FW算法"><a href="#MVEE-Minimun-Volumn-Enclosing-Ellipsoids-与FW算法" class="headerlink" title="MVEE(Minimun Volumn Enclosing Ellipsoids)与FW算法"></a>MVEE(Minimun Volumn Enclosing Ellipsoids)与FW算法</h2><p>根据MVEE问题的最优性条件，只需要求解对偶问题就可以得到原问题的最优解，对偶问题如下：</p>
-<p>$$<br>\begin{align}<br>&amp;\text{max}_{u \in \mathcal{R}^m} \quad &amp; g(u)&amp; \triangleq \text{lndet}(XUX^T) \tag{7} \\<br>&amp;\text{s.t.} \quad &amp;\mathbf{1}^Tu&amp;=1 \nonumber \\<br>&amp;&amp;u&amp;\ge0<br>\end{align}<br>$$</p>
-<p>对于问题$(7)$可以用FW算法求解。</p>
-<p>因为约束的单位单纯形，所以对应的问题$(2)$的解一定在单纯形的顶点上，也就是$ s_k=e_i $，$i$为$ g(u) $在$u_k$的梯度中最小的一个元素的下标。更新得到的$u_k$一定还在单位单纯形上。而梯度下降算法与坐标下降算法是不能保证每一步更新得到的$u_k$仍在单纯形上。</p>
-<p><span id="1"></span><br>[1] Frank, M.; Wolfe, P. (1956). “An algorithm for quadratic programming”. Naval Research Logistics Quarterly. 3: 95. doi:10.1002/nav.3800030109.</p>
-
+<h3 id="求MVEE的近似解的FW算法-Todd-2016"><a href="#求MVEE的近似解的FW算法-Todd-2016" class="headerlink" title="求MVEE的近似解的FW算法(Todd 2016)"></a>求MVEE的近似解的FW算法<a href="#2">(Todd 2016)</a></h3><p>因为$(1)$的约束是单位单纯形，所以FW算法中$(3)$的解一定在单纯形的顶点上，也就是$ s_k=e_i $，$i$为$ g(u) $在$u_k$的梯度中最小的一个元素的下标。更新得到的$u_k$一定还在单位单纯形上。而梯度下降算法与坐标下降算法是不能保证每一步更新得到的$u_k$仍在单纯形上。</p>
+<blockquote>
+<p>FW algorithm<br>给定初值$u$满足$(7)$的约束与$\epsilon\gt0$，计算$g(u)$的梯度和$XUX^T$的Cholesky分解<br>$$<br>w\triangleq\nabla g(u)<br>$$<br>步骤1. 计算<br>$$<br>\epsilon_+=\max_h\frac{(w_h-n)}{n}<br>$$<br>记$h=i$取得最大值，如果$\epsilon_+ \lt\epsilon$，停止：得到近似解u</p>
+<p>步骤2. 计算<br>$$<br>\lambda \triangleq\frac{w_i-n}{(n-1)w_i}<br>$$<br>更新 $ u \leftarrow   (1+\lambda )^{-1} (u+\lambda e_i)$</p>
+<p>步骤3. 更新$w$与$XUX^T$的Cholesky分解，回到步骤1</p>
+</blockquote>
+<h2 id="WA算法"><a href="#WA算法" class="headerlink" title="WA算法"></a>WA算法</h2><p>回到下降方向的选择问题，在FW算法中下降方向指向线性近似问题的最优解。从另一个角度来考虑，下降方向也可以指向线性近似问题的最差解的负方向(如果这个解存在的话)，也就是远离最差的解。WA算法(Atwood)综合考虑了这两种思想来选择下降方向。</p>
+<blockquote>
+<p>WA algorithm<br>给定初值$u$满足$(7)$的约束与$\epsilon\gt0$，计算$g(u)$的梯度和$XUX^T$的Cholesky分解<br>$$<br>w\triangleq\nabla g(u)<br>$$<br>步骤1. 计算<br>$$<br>\epsilon_+=\max_h\frac{(w_h-n)}{n}, \,\epsilon_-=\max_h \left\{ \frac{(n-w_h)}{n} : u_h \gt 0 \right\}<br>$$<br>记$h=i$使得$\epsilon_+$取得最大值，$h=j$使得$\epsilon_-$取得最大值。如果$\max \{\epsilon_+,\epsilon_- \} \lt\epsilon$，停止：得到近似解u；否则，如果$\epsilon_+\gt \epsilon_-$，前往步骤2；如果$\epsilon_+\lt \epsilon_-$，前往步骤3。</p>
+<p>步骤2. 计算<br>$$<br>\lambda \triangleq\frac{w_i-n}{(n-1)w_i}<br>$$<br>更新 $ u \leftarrow   (1+\lambda )^{-1} (u+\lambda e_i)$，前往步骤4。</p>
+<p>步骤3.计算<br>$$<br>\lambda \triangleq\frac{w_j-n}{(n-1)w_j}<br>$$<br>令$\lambda=\max\{-u_j,\lambda\}$，更新 $ u \leftarrow   (1+\lambda )^{-1} (u+\lambda e_j)$，前往步骤4。</p>
+<p>步骤4. 更新$w$与$XUX^T$的Cholesky分解，回到步骤1</p>
+</blockquote>
+<font size="2"><br><span id="1">[1] Frank, Marguerite, and Philip Wolfe. “An algorithm for quadratic programming.” Naval Research Logistics (NRL) 3.1‐2 (1956): 95-110.</span><br><span id="2">[2] Todd, M.J. Minimum volume ellipsoids: theory and algorithms. New York: Society for Industrial and Applied Mathematics, 2016.  26-29.</span><br></font>
       
     </div>
     
@@ -463,7 +475,7 @@
           
             <a href="/tags/MVEE/" rel="tag"># MVEE</a>
           
-            <a href="/tags/algorithm/" rel="tag"># algorithm</a>
+            <a href="/tags/optimization/" rel="tag"># optimization</a>
           
         </div>
       
@@ -583,7 +595,7 @@
               
               <div class="site-state-item site-state-categories">
                 <a href="/categories/index.html">
-                  <span class="site-state-item-count">2</span>
+                  <span class="site-state-item-count">3</span>
                   <span class="site-state-item-name">分类</span>
                 </a>
               </div>
@@ -594,7 +606,7 @@
               
               <div class="site-state-item site-state-tags">
                 <a href="/tags/index.html">
-                  <span class="site-state-item-count">6</span>
+                  <span class="site-state-item-count">7</span>
                   <span class="site-state-item-name">标签</span>
                 </a>
               </div>
@@ -643,7 +655,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#FW算法与MVEE"><span class="nav-text">FW算法与MVEE</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#FW算法"><span class="nav-text">FW算法</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#算法"><span class="nav-text">算法</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#算法的解释"><span class="nav-text">算法的解释</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#MVEE-Minimun-Volumn-Enclosing-Ellipsoids-与FW算法"><span class="nav-text">MVEE(Minimun Volumn Enclosing Ellipsoids)与FW算法</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#MVEE-Minimun-Volumn-Enclosing-Ellipsoids"><span class="nav-text">MVEE(Minimun Volumn Enclosing Ellipsoids)</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#FW算法"><span class="nav-text">FW算法</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#算法"><span class="nav-text">算法</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#算法的解释"><span class="nav-text">算法的解释</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#求MVEE的近似解的FW算法-Todd-2016"><span class="nav-text">求MVEE的近似解的FW算法(Todd 2016)</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#WA算法"><span class="nav-text">WA算法</span></a></li></ol></div>
             
 
           </div>
