@@ -5,7 +5,7 @@
     
   <url>
     <loc>https://thaning0.github.io/2017/12/23/MVEEAlgorithm/</loc>
-    <lastmod>2017-12-24T16:07:29.559Z</lastmod>
+    <lastmod>2017-12-24T16:12:28.414Z</lastmod>
     <data>
         <display>
         <title>Algorithms for the MVEE problem</title>
@@ -26,6 +26,26 @@
 
     
   <url>
+    <loc>https://thaning0.github.io/2017/12/22/mathjax/</loc>
+    <lastmod>2017-12-24T16:09:39.208Z</lastmod>
+    <data>
+        <display>
+        <title>Mathjax基本用法</title>
+        <pubTime>2017-12-21T16:00:00.000Z</pubTime>
+        
+        <tag>mathjax</tag>
+         
+         
+           
+             
+              <breadCrumb title="Tutorial" url="https://thaning0.github.io/categories/Tutorial/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>https://thaning0.github.io/2017/12/24/memorandum/</loc>
     <lastmod>2017-12-24T16:00:53.558Z</lastmod>
     <data>
@@ -39,26 +59,6 @@
            
              
               <breadCrumb title="Memo" url="https://thaning0.github.io/categories/Memo/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>https://thaning0.github.io/2017/12/22/mathjax/</loc>
-    <lastmod>2017-12-24T06:41:19.233Z</lastmod>
-    <data>
-        <display>
-        <title>Mathjax基本用法</title>
-        <pubTime>2017-12-21T16:00:00.000Z</pubTime>
-        
-        <tag>mathjax</tag>
-         
-         
-           
-             
-              <breadCrumb title="Tutorial" url="https://thaning0.github.io/categories/Tutorial/"/>
           
         </display>
     </data>
